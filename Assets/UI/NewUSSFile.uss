@@ -1,0 +1,57 @@
+Label{
+    color: white;
+    font-size: 20px;
+}
+VisualElement{
+    width: 50px;
+    height: 50px;
+}
+
+
+
+:root{
+    background-color : #1e1e1e;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.container{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    border-width: 4px;
+    border-color: white;
+    border-radius: 10px;
+}
+.ruleBox{/*Scale the entire rulebox and its content down */
+    
+    flex-direction: column;
+    width: 60%;
+    height: 78%;
+    border-width: 4px;
+    border-color: white;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+   
+    
+}
+
+.button{
+    margin: 10px;
+}
+
+.dropdown{
+    margin: 5px;
+}
+.toggle{
+    margin: 5px;
+}
+.integerField{
+    margin: 5px;
+}
+
