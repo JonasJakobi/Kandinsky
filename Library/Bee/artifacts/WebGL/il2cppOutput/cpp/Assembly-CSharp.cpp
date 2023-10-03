@@ -368,8 +368,8 @@ struct YogaNode_t4B5B593220CCB315B5A60CB48BA4795636F04DDA;
 struct CameraCallback_t844E527BFE37BC0495E7F67993E43C07642DA9DD;
 // CanvasManager/<>c
 struct U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB;
-// CanvasManager/<TakeScreenshot>d__14
-struct U3CTakeScreenshotU3Ed__14_tB19352FA59C2D9E2C9AF763D38C43CA030980714;
+// CanvasManager/<TakeScreenshot>d__16
+struct U3CTakeScreenshotU3Ed__16_tF87ED70CF7C8BB6DA9BE93DD937A76A9D27CD5FB;
 // ConfigMenu/<>c
 struct U3CU3Ec_tB96364748641196EA179A22F003317692C02BF41;
 // UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
@@ -406,7 +406,7 @@ IL2CPP_EXTERN_C RuntimeClass* StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9
 IL2CPP_EXTERN_C RuntimeClass* TextField_tDB34369F9468D7F02670087D9444EC23115827D9_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Toggle_t27BE43456B97DD7A793D272D3318F9FE682B844C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Type_t_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* U3CTakeScreenshotU3Ed__14_tB19352FA59C2D9E2C9AF763D38C43CA030980714_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* U3CTakeScreenshotU3Ed__16_tF87ED70CF7C8BB6DA9BE93DD937A76A9D27CD5FB_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* U3CU3Ec_tB96364748641196EA179A22F003317692C02BF41_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115_il2cpp_TypeInfo_var;
@@ -526,9 +526,9 @@ IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_mCE9CE07BAC02FB11F9A5FE6F92
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_mC898F7E3D9541F17BD8B79579FDD431C0651E12D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* TextInputBaseField_1_get_text_mBC8A007E7BC62944424046894BBCFFB2605E0D1E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CTakeScreenshotU3Ed__14_System_Collections_IEnumerator_Reset_mBEC49E9E2B7BB75218F5349FFA3CA3FDEE27CF19_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CTakeScreenshotU3Ed__16_System_Collections_IEnumerator_Reset_m629D0A1BEEBEB8D8DEB5BDA2C1B4940F7D8594E3_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CGenerateU3Eb__8_0_m49DD0C9CEBE420DB21EE2B8C4A98086389C5734F_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CShuffleCanvasesU3Eb__15_0_m1B296BC4578DED1880FDFBBEF739F4463DD1AA89_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CShuffleCanvasesU3Eb__17_0_m970E90ED80D93D5FD9B04CB4F2CA79E89C954AC9_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* ValueTuple_2__ctor_mCEFCE718C371BB5F9DA192FB9A85F841F43A1A81_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeType* ColorType_t216535D3F45ED8834EBCF66D05B9C57EA8918299_0_0_0_var;
 IL2CPP_EXTERN_C const RuntimeType* Direction_t0F90F7AF66A441A7E36A4FBD84D6A0AEACDC52CC_0_0_0_var;
@@ -828,16 +828,16 @@ struct U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB_StaticFields
 {
 	// CanvasManager/<>c CanvasManager/<>c::<>9
 	U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB* ___U3CU3E9_0;
-	// System.Func`2<System.Int32,System.Single> CanvasManager/<>c::<>9__15_0
-	Func_2_tBBFF35F4EA206696290D8B23ED36491D37219FAF* ___U3CU3E9__15_0_1;
+	// System.Func`2<System.Int32,System.Single> CanvasManager/<>c::<>9__17_0
+	Func_2_tBBFF35F4EA206696290D8B23ED36491D37219FAF* ___U3CU3E9__17_0_1;
 };
 
-// CanvasManager/<TakeScreenshot>d__14
-struct U3CTakeScreenshotU3Ed__14_tB19352FA59C2D9E2C9AF763D38C43CA030980714  : public RuntimeObject
+// CanvasManager/<TakeScreenshot>d__16
+struct U3CTakeScreenshotU3Ed__16_tF87ED70CF7C8BB6DA9BE93DD937A76A9D27CD5FB  : public RuntimeObject
 {
-	// System.Int32 CanvasManager/<TakeScreenshot>d__14::<>1__state
+	// System.Int32 CanvasManager/<TakeScreenshot>d__16::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object CanvasManager/<TakeScreenshot>d__14::<>2__current
+	// System.Object CanvasManager/<TakeScreenshot>d__16::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
 };
 
@@ -3337,8 +3337,12 @@ struct CanvasManager_t2F97CDE0D08B095FCDD0788D60B3141E1612EC1C  : public MonoBeh
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___RuleCreatorUI_9;
 	// System.Boolean CanvasManager::toggleHint
 	bool ___toggleHint_10;
+	// System.Boolean CanvasManager::toogleHintIsWrong
+	bool ___toogleHintIsWrong_11;
 	// System.Int32 CanvasManager::verbosity
-	int32_t ___verbosity_11;
+	int32_t ___verbosity_12;
+	// System.Boolean CanvasManager::reverseOneCanvas
+	bool ___reverseOneCanvas_13;
 };
 
 // ConfigMenu
@@ -4967,8 +4971,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_DrawShapes_m4798779DF8A05F95451F7
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuleExplanations_PrintSelectedImage_mCE90B2A23441E496F7CBA9B6470C901DF76F39DC (RuleExplanations_tAA881B9A6CCB07735825EC369361CB58C55810AF* __this, int32_t ___indexOfImage0, const RuntimeMethod* method) ;
 // System.Void RuleExplanations::PrintExplanations(ShapeRule[],System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RuleExplanations_PrintExplanations_m1C0EBA4729A2036C1C1B49F3802A8D216672687F (RuleExplanations_tAA881B9A6CCB07735825EC369361CB58C55810AF* __this, ShapeRuleU5BU5D_t75A677E8BD71240ED45D302FB6D1DD32B6BE809A* ___rules0, int32_t ___verbosity1, const RuntimeMethod* method) ;
-// System.Void CanvasManager/<TakeScreenshot>d__14::.ctor(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CTakeScreenshotU3Ed__14__ctor_mEB9F97C61C36801D54B589852C03F5714C19EC4D (U3CTakeScreenshotU3Ed__14_tB19352FA59C2D9E2C9AF763D38C43CA030980714* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
+// System.Void CanvasManager/<TakeScreenshot>d__16::.ctor(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CTakeScreenshotU3Ed__16__ctor_m412890F555C43613E780A0F2C534575529266675 (U3CTakeScreenshotU3Ed__16_tF87ED70CF7C8BB6DA9BE93DD937A76A9D27CD5FB* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<System.Int32>::.ctor()
 inline void List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8 (List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* __this, const RuntimeMethod* method)
 {
@@ -6793,7 +6797,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasManager_UpdateCanvases_m72C8FB2871
 		ShapeRuleCreator_AddSecondaryPositionRuleToCanvas_m5944101DE6756891C39A9510B647CB9BD4D7F6F6(L_2, NULL);
 		// for(int i = 1; i < 5; i++)//go through canvas copy 1-3 and apply rules and amountofShapes from canvas 0.
 		V_0 = 1;
-		goto IL_00d4;
+		goto IL_00dc;
 	}
 
 IL_0014:
@@ -6861,11 +6865,18 @@ IL_0014:
 		L_51 = ShapeRuleCreator_CopyRules_mB08FAFF78AF8DEA6E7E3119DAE5867B1D31C3ACD(L_50, NULL);
 		L_46->___rules_12 = L_51;
 		Il2CppCodeGenWriteBarrier((void**)(&L_46->___rules_12), (void*)L_51);
-		// if(i == 4){
+		// if(i == 4 && reverseOneCanvas){
 		int32_t L_52 = V_0;
 		if ((!(((uint32_t)L_52) == ((uint32_t)4))))
 		{
-			goto IL_00d0;
+			goto IL_00d8;
+		}
+	}
+	{
+		bool L_53 = __this->___reverseOneCanvas_13;
+		if (!L_53)
+		{
+			goto IL_00d8;
 		}
 	}
 	{
@@ -6873,25 +6884,25 @@ IL_0014:
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m86567BCF22BBE7809747817453CACA0E41E68219(_stringLiteral4D7C3BE021CC550F7A209F1B09DCF20BB413A430, NULL);
 		// ShapeRuleCreator.ReverseRules(canvases[i]);
-		CanvasU5BU5D_t04A47A6750268FBDFB6FFBFB2326FB2EE9ABA0A7* L_53 = __this->___canvases_7;
-		int32_t L_54 = V_0;
-		int32_t L_55 = L_54;
-		Canvas_tB1BFD6C57E26C3C7D2F1FF029CBCF18B22E64F64* L_56 = (L_53)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_55));
-		ShapeRuleCreator_ReverseRules_m20D28D6726C89B11DD34B6125A12B01B369E77F6(L_56, NULL);
+		CanvasU5BU5D_t04A47A6750268FBDFB6FFBFB2326FB2EE9ABA0A7* L_54 = __this->___canvases_7;
+		int32_t L_55 = V_0;
+		int32_t L_56 = L_55;
+		Canvas_tB1BFD6C57E26C3C7D2F1FF029CBCF18B22E64F64* L_57 = (L_54)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_56));
+		ShapeRuleCreator_ReverseRules_m20D28D6726C89B11DD34B6125A12B01B369E77F6(L_57, NULL);
 	}
 
-IL_00d0:
-	{
-		// for(int i = 1; i < 5; i++)//go through canvas copy 1-3 and apply rules and amountofShapes from canvas 0.
-		int32_t L_57 = V_0;
-		V_0 = ((int32_t)il2cpp_codegen_add(L_57, 1));
-	}
-
-IL_00d4:
+IL_00d8:
 	{
 		// for(int i = 1; i < 5; i++)//go through canvas copy 1-3 and apply rules and amountofShapes from canvas 0.
 		int32_t L_58 = V_0;
-		if ((((int32_t)L_58) < ((int32_t)5)))
+		V_0 = ((int32_t)il2cpp_codegen_add(L_58, 1));
+	}
+
+IL_00dc:
+	{
+		// for(int i = 1; i < 5; i++)//go through canvas copy 1-3 and apply rules and amountofShapes from canvas 0.
+		int32_t L_59 = V_0;
+		if ((((int32_t)L_59) < ((int32_t)5)))
 		{
 			goto IL_0014;
 		}
@@ -7058,30 +7069,50 @@ IL_0044:
 		bool L_14 = __this->___toggleHint_10;
 		if (!L_14)
 		{
-			goto IL_006b;
+			goto IL_008c;
 		}
 	}
 	{
-		// explanations.PrintSelectedImage(canvases[4].positionIndex);
-		RuleExplanations_tAA881B9A6CCB07735825EC369361CB58C55810AF* L_15 = __this->___explanations_8;
-		CanvasU5BU5D_t04A47A6750268FBDFB6FFBFB2326FB2EE9ABA0A7* L_16 = __this->___canvases_7;
-		int32_t L_17 = 4;
-		Canvas_tB1BFD6C57E26C3C7D2F1FF029CBCF18B22E64F64* L_18 = (L_16)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_17));
-		int32_t L_19 = L_18->___positionIndex_4;
-		RuleExplanations_PrintSelectedImage_mCE90B2A23441E496F7CBA9B6470C901DF76F39DC(L_15, L_19, NULL);
+		// if(toogleHintIsWrong){
+		bool L_15 = __this->___toogleHintIsWrong_11;
+		if (!L_15)
+		{
+			goto IL_0073;
+		}
+	}
+	{
+		// explanations.PrintSelectedImage(canvases[0].positionIndex);
+		RuleExplanations_tAA881B9A6CCB07735825EC369361CB58C55810AF* L_16 = __this->___explanations_8;
+		CanvasU5BU5D_t04A47A6750268FBDFB6FFBFB2326FB2EE9ABA0A7* L_17 = __this->___canvases_7;
+		int32_t L_18 = 0;
+		Canvas_tB1BFD6C57E26C3C7D2F1FF029CBCF18B22E64F64* L_19 = (L_17)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_18));
+		int32_t L_20 = L_19->___positionIndex_4;
+		RuleExplanations_PrintSelectedImage_mCE90B2A23441E496F7CBA9B6470C901DF76F39DC(L_16, L_20, NULL);
 		return;
 	}
 
-IL_006b:
+IL_0073:
+	{
+		// explanations.PrintSelectedImage(canvases[4].positionIndex);
+		RuleExplanations_tAA881B9A6CCB07735825EC369361CB58C55810AF* L_21 = __this->___explanations_8;
+		CanvasU5BU5D_t04A47A6750268FBDFB6FFBFB2326FB2EE9ABA0A7* L_22 = __this->___canvases_7;
+		int32_t L_23 = 4;
+		Canvas_tB1BFD6C57E26C3C7D2F1FF029CBCF18B22E64F64* L_24 = (L_22)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_23));
+		int32_t L_25 = L_24->___positionIndex_4;
+		RuleExplanations_PrintSelectedImage_mCE90B2A23441E496F7CBA9B6470C901DF76F39DC(L_21, L_25, NULL);
+		return;
+	}
+
+IL_008c:
 	{
 		// explanations.PrintExplanations(canvases[0].rules, verbosity);
-		RuleExplanations_tAA881B9A6CCB07735825EC369361CB58C55810AF* L_20 = __this->___explanations_8;
-		CanvasU5BU5D_t04A47A6750268FBDFB6FFBFB2326FB2EE9ABA0A7* L_21 = __this->___canvases_7;
-		int32_t L_22 = 0;
-		Canvas_tB1BFD6C57E26C3C7D2F1FF029CBCF18B22E64F64* L_23 = (L_21)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_22));
-		ShapeRuleU5BU5D_t75A677E8BD71240ED45D302FB6D1DD32B6BE809A* L_24 = L_23->___rules_12;
-		int32_t L_25 = __this->___verbosity_11;
-		RuleExplanations_PrintExplanations_m1C0EBA4729A2036C1C1B49F3802A8D216672687F(L_20, L_24, L_25, NULL);
+		RuleExplanations_tAA881B9A6CCB07735825EC369361CB58C55810AF* L_26 = __this->___explanations_8;
+		CanvasU5BU5D_t04A47A6750268FBDFB6FFBFB2326FB2EE9ABA0A7* L_27 = __this->___canvases_7;
+		int32_t L_28 = 0;
+		Canvas_tB1BFD6C57E26C3C7D2F1FF029CBCF18B22E64F64* L_29 = (L_27)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_28));
+		ShapeRuleU5BU5D_t75A677E8BD71240ED45D302FB6D1DD32B6BE809A* L_30 = L_29->___rules_12;
+		int32_t L_31 = __this->___verbosity_12;
+		RuleExplanations_PrintExplanations_m1C0EBA4729A2036C1C1B49F3802A8D216672687F(L_26, L_30, L_31, NULL);
 		// }
 		return;
 	}
@@ -7092,12 +7123,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* CanvasManager_TakeScreenshot_m
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CTakeScreenshotU3Ed__14_tB19352FA59C2D9E2C9AF763D38C43CA030980714_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CTakeScreenshotU3Ed__16_tF87ED70CF7C8BB6DA9BE93DD937A76A9D27CD5FB_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		U3CTakeScreenshotU3Ed__14_tB19352FA59C2D9E2C9AF763D38C43CA030980714* L_0 = (U3CTakeScreenshotU3Ed__14_tB19352FA59C2D9E2C9AF763D38C43CA030980714*)il2cpp_codegen_object_new(U3CTakeScreenshotU3Ed__14_tB19352FA59C2D9E2C9AF763D38C43CA030980714_il2cpp_TypeInfo_var);
-		U3CTakeScreenshotU3Ed__14__ctor_mEB9F97C61C36801D54B589852C03F5714C19EC4D(L_0, 0, NULL);
+		U3CTakeScreenshotU3Ed__16_tF87ED70CF7C8BB6DA9BE93DD937A76A9D27CD5FB* L_0 = (U3CTakeScreenshotU3Ed__16_tF87ED70CF7C8BB6DA9BE93DD937A76A9D27CD5FB*)il2cpp_codegen_object_new(U3CTakeScreenshotU3Ed__16_tF87ED70CF7C8BB6DA9BE93DD937A76A9D27CD5FB_il2cpp_TypeInfo_var);
+		U3CTakeScreenshotU3Ed__16__ctor_m412890F555C43613E780A0F2C534575529266675(L_0, 0, NULL);
 		return L_0;
 	}
 }
@@ -7114,7 +7145,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasManager_ShuffleCanvases_m6A0FC2CDD
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1__ctor_m17F501B5A5C289ECE1B4F3D6EBF05DFA421433F8_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_mD99081BEFA1AB3526715F489192B0F7F596C183D_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_U3CShuffleCanvasesU3Eb__15_0_m1B296BC4578DED1880FDFBBEF739F4463DD1AA89_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_U3CShuffleCanvasesU3Eb__17_0_m970E90ED80D93D5FD9B04CB4F2CA79E89C954AC9_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -7170,7 +7201,7 @@ IL_0025:
 		// positions = positions.OrderBy(x => Random.value).ToList();
 		List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* L_12 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB_il2cpp_TypeInfo_var);
-		Func_2_tBBFF35F4EA206696290D8B23ED36491D37219FAF* L_13 = ((U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB_il2cpp_TypeInfo_var))->___U3CU3E9__15_0_1;
+		Func_2_tBBFF35F4EA206696290D8B23ED36491D37219FAF* L_13 = ((U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB_il2cpp_TypeInfo_var))->___U3CU3E9__17_0_1;
 		Func_2_tBBFF35F4EA206696290D8B23ED36491D37219FAF* L_14 = L_13;
 		G_B4_0 = L_14;
 		G_B4_1 = L_12;
@@ -7185,10 +7216,10 @@ IL_0025:
 		il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB_il2cpp_TypeInfo_var);
 		U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB* L_15 = ((U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB_il2cpp_TypeInfo_var))->___U3CU3E9_0;
 		Func_2_tBBFF35F4EA206696290D8B23ED36491D37219FAF* L_16 = (Func_2_tBBFF35F4EA206696290D8B23ED36491D37219FAF*)il2cpp_codegen_object_new(Func_2_tBBFF35F4EA206696290D8B23ED36491D37219FAF_il2cpp_TypeInfo_var);
-		Func_2__ctor_m21E85B4040A96377ECFBA2A1C40E3A1C0EF3EF7F(L_16, L_15, (intptr_t)((void*)U3CU3Ec_U3CShuffleCanvasesU3Eb__15_0_m1B296BC4578DED1880FDFBBEF739F4463DD1AA89_RuntimeMethod_var), NULL);
+		Func_2__ctor_m21E85B4040A96377ECFBA2A1C40E3A1C0EF3EF7F(L_16, L_15, (intptr_t)((void*)U3CU3Ec_U3CShuffleCanvasesU3Eb__17_0_m970E90ED80D93D5FD9B04CB4F2CA79E89C954AC9_RuntimeMethod_var), NULL);
 		Func_2_tBBFF35F4EA206696290D8B23ED36491D37219FAF* L_17 = L_16;
-		((U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB_il2cpp_TypeInfo_var))->___U3CU3E9__15_0_1 = L_17;
-		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB_il2cpp_TypeInfo_var))->___U3CU3E9__15_0_1), (void*)L_17);
+		((U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB_il2cpp_TypeInfo_var))->___U3CU3E9__17_0_1 = L_17;
+		Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB_il2cpp_TypeInfo_var))->___U3CU3E9__17_0_1), (void*)L_17);
 		G_B5_0 = L_17;
 		G_B5_1 = G_B4_1;
 	}
@@ -7433,8 +7464,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasManager__ctor_m8D01C316B4C83FEB1E2
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// System.Void CanvasManager/<TakeScreenshot>d__14::.ctor(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CTakeScreenshotU3Ed__14__ctor_mEB9F97C61C36801D54B589852C03F5714C19EC4D (U3CTakeScreenshotU3Ed__14_tB19352FA59C2D9E2C9AF763D38C43CA030980714* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) 
+// System.Void CanvasManager/<TakeScreenshot>d__16::.ctor(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CTakeScreenshotU3Ed__16__ctor_m412890F555C43613E780A0F2C534575529266675 (U3CTakeScreenshotU3Ed__16_tF87ED70CF7C8BB6DA9BE93DD937A76A9D27CD5FB* __this, int32_t ___U3CU3E1__state0, const RuntimeMethod* method) 
 {
 	{
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
@@ -7443,15 +7474,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CTakeScreenshotU3Ed__14__ctor_mEB9F97C
 		return;
 	}
 }
-// System.Void CanvasManager/<TakeScreenshot>d__14::System.IDisposable.Dispose()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CTakeScreenshotU3Ed__14_System_IDisposable_Dispose_mDF2149D3924116B0268D4AC613461CE11F81811A (U3CTakeScreenshotU3Ed__14_tB19352FA59C2D9E2C9AF763D38C43CA030980714* __this, const RuntimeMethod* method) 
+// System.Void CanvasManager/<TakeScreenshot>d__16::System.IDisposable.Dispose()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CTakeScreenshotU3Ed__16_System_IDisposable_Dispose_mBD38FF52470A5FC58088F92E1FBED275DB26C2C8 (U3CTakeScreenshotU3Ed__16_tF87ED70CF7C8BB6DA9BE93DD937A76A9D27CD5FB* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// System.Boolean CanvasManager/<TakeScreenshot>d__14::MoveNext()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CTakeScreenshotU3Ed__14_MoveNext_mD784BA38BBF1B278D57DE2D02DECB7E9D9F28F81 (U3CTakeScreenshotU3Ed__14_tB19352FA59C2D9E2C9AF763D38C43CA030980714* __this, const RuntimeMethod* method) 
+// System.Boolean CanvasManager/<TakeScreenshot>d__16::MoveNext()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CTakeScreenshotU3Ed__16_MoveNext_mD9101A0784437DD065682E591FAF95AAAB3C45A8 (U3CTakeScreenshotU3Ed__16_tF87ED70CF7C8BB6DA9BE93DD937A76A9D27CD5FB* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -7522,25 +7553,25 @@ IL_0060:
 		return (bool)0;
 	}
 }
-// System.Object CanvasManager/<TakeScreenshot>d__14::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CTakeScreenshotU3Ed__14_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m0D8DA74C996AD9D852AD538DCF6AE6A1FA18333F (U3CTakeScreenshotU3Ed__14_tB19352FA59C2D9E2C9AF763D38C43CA030980714* __this, const RuntimeMethod* method) 
+// System.Object CanvasManager/<TakeScreenshot>d__16::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CTakeScreenshotU3Ed__16_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mF1C58BAE3E9F09A665CD888450DB3849DB76029B (U3CTakeScreenshotU3Ed__16_tF87ED70CF7C8BB6DA9BE93DD937A76A9D27CD5FB* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
 		return L_0;
 	}
 }
-// System.Void CanvasManager/<TakeScreenshot>d__14::System.Collections.IEnumerator.Reset()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CTakeScreenshotU3Ed__14_System_Collections_IEnumerator_Reset_mBEC49E9E2B7BB75218F5349FFA3CA3FDEE27CF19 (U3CTakeScreenshotU3Ed__14_tB19352FA59C2D9E2C9AF763D38C43CA030980714* __this, const RuntimeMethod* method) 
+// System.Void CanvasManager/<TakeScreenshot>d__16::System.Collections.IEnumerator.Reset()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CTakeScreenshotU3Ed__16_System_Collections_IEnumerator_Reset_m629D0A1BEEBEB8D8DEB5BDA2C1B4940F7D8594E3 (U3CTakeScreenshotU3Ed__16_tF87ED70CF7C8BB6DA9BE93DD937A76A9D27CD5FB* __this, const RuntimeMethod* method) 
 {
 	{
 		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
 		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CTakeScreenshotU3Ed__14_System_Collections_IEnumerator_Reset_mBEC49E9E2B7BB75218F5349FFA3CA3FDEE27CF19_RuntimeMethod_var)));
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CTakeScreenshotU3Ed__16_System_Collections_IEnumerator_Reset_m629D0A1BEEBEB8D8DEB5BDA2C1B4940F7D8594E3_RuntimeMethod_var)));
 	}
 }
-// System.Object CanvasManager/<TakeScreenshot>d__14::System.Collections.IEnumerator.get_Current()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CTakeScreenshotU3Ed__14_System_Collections_IEnumerator_get_Current_m5E476D42D3404B932DD7DA1249708677506B59B7 (U3CTakeScreenshotU3Ed__14_tB19352FA59C2D9E2C9AF763D38C43CA030980714* __this, const RuntimeMethod* method) 
+// System.Object CanvasManager/<TakeScreenshot>d__16::System.Collections.IEnumerator.get_Current()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CTakeScreenshotU3Ed__16_System_Collections_IEnumerator_get_Current_mFA50AF8D389403D137702298A221A176FEA89DC9 (U3CTakeScreenshotU3Ed__16_tF87ED70CF7C8BB6DA9BE93DD937A76A9D27CD5FB* __this, const RuntimeMethod* method) 
 {
 	{
 		RuntimeObject* L_0 = __this->___U3CU3E2__current_1;
@@ -7580,8 +7611,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_m86D53713FA61792319A59AA94
 		return;
 	}
 }
-// System.Single CanvasManager/<>c::<ShuffleCanvases>b__15_0(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float U3CU3Ec_U3CShuffleCanvasesU3Eb__15_0_m1B296BC4578DED1880FDFBBEF739F4463DD1AA89 (U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB* __this, int32_t ___x0, const RuntimeMethod* method) 
+// System.Single CanvasManager/<>c::<ShuffleCanvases>b__17_0(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float U3CU3Ec_U3CShuffleCanvasesU3Eb__17_0_m970E90ED80D93D5FD9B04CB4F2CA79E89C954AC9 (U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB* __this, int32_t ___x0, const RuntimeMethod* method) 
 {
 	{
 		// positions = positions.OrderBy(x => Random.value).ToList();
@@ -9687,8 +9718,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool ShapeRule_checkPositionOfOneShape_m2CC90
 	}
 	float V_0 = 0.0f;
 	{
-		// float padding = 1.4f;
-		V_0 = (1.39999998f);
+		// float padding = 1.8f;
+		V_0 = (1.79999995f);
 		// if (direction.Equals( Direction.Above))
 		int32_t* L_0 = (&__this->___direction_7);
 		int32_t L_1 = 2;

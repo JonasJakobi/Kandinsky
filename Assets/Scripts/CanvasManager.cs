@@ -23,8 +23,13 @@ public class CanvasManager : MonoBehaviour
     GameObject RuleCreatorUI;
     [Header("If true, hint about the correct image will be shown, if false, show AI explanations.")]
     public bool toggleHint = true;
+[Header("If we are have hints on, this flag will make the hint always be wrong.")]
+    public bool toogleHintIsWrong = false;
     [Header("Verbosity for Explanations(1-4). Set to 0 for None.")]
     public int verbosity;
+    [Header("Reverse one of the 5 canvases rules?")]
+    public bool reverseOneCanvas = false;
+    
     private void Start()
     {
         CalculateAmountOfRules();
@@ -46,7 +51,7 @@ public class CanvasManager : MonoBehaviour
 
             canvases[i].rules = ShapeRuleCreator.CopyRules(canvases[0].rules);
             //Reverse Rules for last canvas
-            if(i == 4){
+            if(i == 4 && reverseOneCanvas){
                 Debug.Log("Reversing Rules");
                 ShapeRuleCreator.ReverseRules(canvases[i]);
             }
@@ -74,6 +79,9 @@ public class CanvasManager : MonoBehaviour
         {
             RuleCreatorUI.SetActive(!RuleCreatorUI.activeSelf);
         }
+        if(Input.GetKeyDown(KeyCode.Tab)){
+            RuleCreatorUI.GetComponent<ConfigMenu>().ToggleGenerationOfPage();
+        }
         if (Input.GetKeyDown(KeyCode.O))
         {
             Application.OpenURL(directory);
@@ -94,7 +102,12 @@ public class CanvasManager : MonoBehaviour
 
 
         if(toggleHint){
-            explanations.PrintSelectedImage(canvases[4].positionIndex);
+            if(toogleHintIsWrong){
+                explanations.PrintSelectedImage(canvases[0].positionIndex);
+            }
+            else{
+                explanations.PrintSelectedImage(canvases[4].positionIndex);
+            }
         }
         else{
             explanations.PrintExplanations(canvases[0].rules, verbosity);

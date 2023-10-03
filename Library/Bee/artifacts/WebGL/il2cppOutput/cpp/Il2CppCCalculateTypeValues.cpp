@@ -10607,16 +10607,16 @@ struct U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB_StaticFields
 {
 	// CanvasManager/<>c CanvasManager/<>c::<>9
 	U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB* ___U3CU3E9_0;
-	// System.Func`2<System.Int32,System.Single> CanvasManager/<>c::<>9__15_0
-	Func_2_tBBFF35F4EA206696290D8B23ED36491D37219FAF* ___U3CU3E9__15_0_1;
+	// System.Func`2<System.Int32,System.Single> CanvasManager/<>c::<>9__17_0
+	Func_2_tBBFF35F4EA206696290D8B23ED36491D37219FAF* ___U3CU3E9__17_0_1;
 };
 
-// CanvasManager/<TakeScreenshot>d__14
-struct U3CTakeScreenshotU3Ed__14_tB19352FA59C2D9E2C9AF763D38C43CA030980714  : public RuntimeObject
+// CanvasManager/<TakeScreenshot>d__16
+struct U3CTakeScreenshotU3Ed__16_tF87ED70CF7C8BB6DA9BE93DD937A76A9D27CD5FB  : public RuntimeObject
 {
-	// System.Int32 CanvasManager/<TakeScreenshot>d__14::<>1__state
+	// System.Int32 CanvasManager/<TakeScreenshot>d__16::<>1__state
 	int32_t ___U3CU3E1__state_0;
-	// System.Object CanvasManager/<TakeScreenshot>d__14::<>2__current
+	// System.Object CanvasManager/<TakeScreenshot>d__16::<>2__current
 	RuntimeObject* ___U3CU3E2__current_1;
 };
 
@@ -47255,8 +47255,12 @@ struct CanvasManager_t2F97CDE0D08B095FCDD0788D60B3141E1612EC1C  : public MonoBeh
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___RuleCreatorUI_9;
 	// System.Boolean CanvasManager::toggleHint
 	bool ___toggleHint_10;
+	// System.Boolean CanvasManager::toogleHintIsWrong
+	bool ___toogleHintIsWrong_11;
 	// System.Int32 CanvasManager::verbosity
-	int32_t ___verbosity_11;
+	int32_t ___verbosity_12;
+	// System.Boolean CanvasManager::reverseOneCanvas
+	bool ___reverseOneCanvas_13;
 };
 
 // UnityEngine.CircleCollider2D
@@ -57577,7 +57581,7 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize3259 = { sizeof (Canvas_tB1B
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3260;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize3260 = { sizeof (CanvasBounds_tE3AC65B732F5C1F452DA19ED85CD799F122EE54B)+ sizeof (RuntimeObject), sizeof(CanvasBounds_tE3AC65B732F5C1F452DA19ED85CD799F122EE54B), 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3261;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize3261 = { sizeof (U3CTakeScreenshotU3Ed__14_tB19352FA59C2D9E2C9AF763D38C43CA030980714), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize3261 = { sizeof (U3CTakeScreenshotU3Ed__16_tF87ED70CF7C8BB6DA9BE93DD937A76A9D27CD5FB), -1, 0, 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3262;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize3262 = { sizeof (U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB), -1, sizeof(U3CU3Ec_t3012A5BA34B47D4E329E7F969EB9F87A608EADEB_StaticFields), 0 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3263;

@@ -339,7 +339,7 @@ MonoBehaviour:
     minAmountRule: 0
     minCount: 3
     positionRules: 1
-    direction: 2
+    direction: 0
     shapeToPositionTo: 3
     colorToPositionTo: 0
   shapeObjects:
@@ -385,7 +385,7 @@ GameObject:
   - component: {fileID: 70895649}
   - component: {fileID: 70895648}
   m_Layer: 5
-  m_Name: UI
+  m_Name: Rules Texts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -899,7 +899,7 @@ GameObject:
   - component: {fileID: 397792108}
   - component: {fileID: 397792107}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Config Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1072,14 +1072,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1885,7 +1885,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1339116329}
   m_Layer: 0
-  m_Name: Canvas Numbers
+  m_Name: Canvas Numbering
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2473,7 +2473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   directory: C:\Users\Public\Pictures\Sample Pictures\
-  fileName: Batch5
+  fileName: f_BatchX2
   currentScreenshotNumber: 1
   canvases:
   - {fileID: 39896612}
@@ -2484,7 +2484,9 @@ MonoBehaviour:
   explanations: {fileID: 1559621502}
   RuleCreatorUI: {fileID: 2094680817}
   toggleHint: 1
+  toogleHintIsWrong: 1
   verbosity: 0
+  reverseOneCanvas: 1
 --- !u!4 &1855017094
 Transform:
   m_ObjectHideFlags: 0

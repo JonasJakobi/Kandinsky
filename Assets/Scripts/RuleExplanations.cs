@@ -8,7 +8,7 @@ public class RuleExplanations : MonoBehaviour
 
     [SerializeField]
     GameObject[] textboxes;
- 
+
 
     public void PrintExplanations(ShapeRule[] rules, int verbosity)
     {
@@ -42,7 +42,7 @@ public class RuleExplanations : MonoBehaviour
         textboxes[2].GetComponent<TextMeshProUGUI>().text = "The AI recommends: " + letter + ")";
 
     }
-    public string[] GetExplanations(ShapeRule[] rules, int verbosity)
+    public static string[] GetExplanations(ShapeRule[] rules, int verbosity)
     {
         
         List<string> answers = new();
@@ -67,7 +67,7 @@ public class RuleExplanations : MonoBehaviour
         }
         return answers.ToArray();
     }
-    private string GenerateAmountRuleExplanation(int verbosity, ShapeType type, ColorType color, int minAmount, bool min)
+    private static string GenerateAmountRuleExplanation(int verbosity, ShapeType type, ColorType color, int minAmount, bool min)
     {
         string answer = "The rule applies to the ";
         if(verbosity == 1)
@@ -80,15 +80,21 @@ public class RuleExplanations : MonoBehaviour
         }
         else if(verbosity == 3 || verbosity == 4)
         {
-            return answer + (min ? "minimum" : "maximum") + " amount of " + getKandinskyShapeExplanation(type, color);
+            return answer + (min ? "minimum" : "maximum") + " amount of " + getKandinskyShapeString(type, color);
         }
         //Full Explanation? f.e. "there has to be a minimum of 3 red squares"
-        return "---- INVALID VERBOSITY, there seems to be some error. ------";
+        else if (verbosity == 5){
+            return (min ? "minimum" : "maximum") + " amount of " + getKandinskyShapeString(type, color) + "is " + minAmount.ToString();
+        }
+        else{
+            return "---- INVALID VERBOSITY, there seems to be some error. ------";
+        }
+        
     }
 
 
     
-    private string GeneratePositionRuleExplanation(int verbosity, ShapeType shape, ColorType color, Direction direction, ShapeType shapeToPositionTo, ColorType colorToPositionTo )
+    private static string GeneratePositionRuleExplanation(int verbosity, ShapeType shape, ColorType color, Direction direction, ShapeType shapeToPositionTo, ColorType colorToPositionTo )
     {
         string answer = "The rule applies to the position of ";
 
@@ -102,14 +108,18 @@ public class RuleExplanations : MonoBehaviour
         }
         else if(verbosity == 3)
         {
-            return answer + getKandinskyShapeExplanation(shape, color) + " in relation to certain other shapes";
+            return answer + getKandinskyShapeString(shape, color) + " in relation to certain other shapes";
         }
         else if(verbosity == 4)
         {
-            return answer + getKandinskyShapeExplanation(shape, color) + " in relation to " + getKandinskyShapeExplanation(shapeToPositionTo, colorToPositionTo) + "";
+            return answer + getKandinskyShapeString(shape, color) + " in relation to " + getKandinskyShapeString(shapeToPositionTo, colorToPositionTo) + "";
         }
         //verbosity 5 which is full explanation? f.e. "Red squares have to be above blue triangles."
-
+        else if (verbosity == 5)
+        {
+            return getKandinskyShapeString(shape, color) + "are" + getDirectionString(direction) + getKandinskyShapeString(shapeToPositionTo, colorToPositionTo);
+        }
+        else
         return "---- INVALID VERBOSITY, there seems to be some error. ------";
     }
 
@@ -119,7 +129,7 @@ public class RuleExplanations : MonoBehaviour
     /// <param name="shape"></param>
     /// <param name="color"></param>
     /// <returns></returns>
-    private string getKandinskyShapeExplanation(ShapeType shape, ColorType color)
+    private static string getKandinskyShapeString(ShapeType shape, ColorType color)
     {
         string answer = "";
         //If it is a specific color we define it before the shape
@@ -143,5 +153,21 @@ public class RuleExplanations : MonoBehaviour
         }
 
         return answer;
+    }
+    private static string getDirectionString(Direction direction)
+    {
+        switch (direction)
+        {
+            case Direction.Above:
+                return "above";
+            case Direction.Below:
+                return "below";
+            case Direction.Left:
+                return "to the left of";
+            case Direction.Right:
+                return "to the right of";
+            default:
+                return "ERROR";
+        }
     }
 }

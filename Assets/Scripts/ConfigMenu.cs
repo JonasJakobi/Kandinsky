@@ -26,7 +26,7 @@ public class ConfigMenu : MonoBehaviour
         public DropdownField otherShape;
         public DropdownField otherColor;
     }
-
+    bool showingRules = false;
     public List<ShapeRule> result;
     // Start is called before the first frame update
     void Start()
@@ -45,33 +45,66 @@ public class ConfigMenu : MonoBehaviour
     private void OnEnable() {
         Generate();
     }
-
+    
     void Generate(){
         var root = document.rootVisualElement;
         root.Clear();
         root.styleSheets.Add(styleSheet);
         ruleFields = new RuleFields();
+        
+        GenerateQuitButton(root);
+        GenerateRuleBox(root);
+        GenerateAddRuleButton(root);
+        GenerateExportRulesButton(root);
+        //GenerateVisualizationOfRules(root);
+    }
+    public void ToggleGenerationOfPage(){
+        showingRules = !showingRules;
+        if(showingRules){
+            SwitchToRuleView();
+        }else{
+            Generate();
+        }
+        
+    }
+    private void SwitchToRuleView(){
+        //Remove all current root elements and call GenerateVisualizationOfRules
+        var root = document.rootVisualElement;
+        root.Clear();
+        root.styleSheets.Add(styleSheet);
+        GenerateVisualizationOfRules(root);
+    }
+    private void GenerateQuitButton(VisualElement root){
         var quitButton = new Button();
         quitButton.text = "Quit Application";
         quitButton.AddToClassList("button");
         quitButton.clicked += () => Application.Quit();
         root.Add(quitButton);
-        GenerateRuleBox(root);
-        
-       //Generate button to print all values
+    }
+    private void GenerateAddRuleButton(VisualElement root){
         var button = new Button();
         button.text = "Add new rule";
         button.AddToClassList("button");
 
-        button.clicked += () => result.Add(CreateShapeRuleFromFields());
+        button.clicked += () =>result.Add(CreateShapeRuleFromFields());
         root.Add(button);
-        
+    }
+    private void GenerateExportRulesButton(VisualElement root){
         var button2 = new Button();
         button2.text = "Export Rules";
         button2.AddToClassList("button");
 
         button2.clicked += () => canvasManager.SetNewRules(result.ToArray());
         root.Add(button2);
+    }
+    private void GenerateVisualizationOfRules(VisualElement root){
+        var ruleBox = new VisualElement();
+        ruleBox.AddToClassList("text");
+        string[] ruleTexts = RuleExplanations.GetExplanations(result.ToArray(), 5);
+        for(int i = 0; i < ruleTexts.Length; i++){
+            ruleBox.Add(new Label(ruleTexts[i]));
+        }
+        root.Add(ruleBox);
     }
 
     ShapeRule CreateShapeRuleFromFields(){
@@ -103,13 +136,13 @@ public class ConfigMenu : MonoBehaviour
         
 
         String[] shapeNames = Enum.GetNames(typeof(ShapeType));
-        Array.Resize(ref shapeNames, shapeNames.Length - 1);
+       //Array.Resize(ref shapeNames, shapeNames.Length - 1);
         var shapeDropdown = CreateDropDown("Shape?", new List<string>(shapeNames), "dropdown");
         ruleBox.Add(shapeDropdown);
         ruleFields.shape = shapeDropdown;
 
         String[] colorNames = Enum.GetNames(typeof(ColorType));
-        Array.Resize(ref colorNames, colorNames.Length - 1);
+        //Array.Resize(ref colorNames, colorNames.Length - 1);
         var colorDropdown = CreateDropDown("Color?", new List<string>(colorNames), "dropdown");
         ruleBox.Add(colorDropdown);
         ruleFields.color = colorDropdown;

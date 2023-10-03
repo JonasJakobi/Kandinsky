@@ -68,24 +68,24 @@ extern void CanvasManager_positionIndexToLetter_mD4802CDD4D1668F400D62F384E991BD
 extern void CanvasManager_CalculateAmountOfRules_mD9719C00AB440454BC1AD417153EE06573102AA6 (void);
 // 0x0000001C System.Void CanvasManager::.ctor()
 extern void CanvasManager__ctor_m8D01C316B4C83FEB1E2FF919AB552C47AC9FB33F (void);
-// 0x0000001D System.Void CanvasManager/<TakeScreenshot>d__14::.ctor(System.Int32)
-extern void U3CTakeScreenshotU3Ed__14__ctor_mEB9F97C61C36801D54B589852C03F5714C19EC4D (void);
-// 0x0000001E System.Void CanvasManager/<TakeScreenshot>d__14::System.IDisposable.Dispose()
-extern void U3CTakeScreenshotU3Ed__14_System_IDisposable_Dispose_mDF2149D3924116B0268D4AC613461CE11F81811A (void);
-// 0x0000001F System.Boolean CanvasManager/<TakeScreenshot>d__14::MoveNext()
-extern void U3CTakeScreenshotU3Ed__14_MoveNext_mD784BA38BBF1B278D57DE2D02DECB7E9D9F28F81 (void);
-// 0x00000020 System.Object CanvasManager/<TakeScreenshot>d__14::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
-extern void U3CTakeScreenshotU3Ed__14_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m0D8DA74C996AD9D852AD538DCF6AE6A1FA18333F (void);
-// 0x00000021 System.Void CanvasManager/<TakeScreenshot>d__14::System.Collections.IEnumerator.Reset()
-extern void U3CTakeScreenshotU3Ed__14_System_Collections_IEnumerator_Reset_mBEC49E9E2B7BB75218F5349FFA3CA3FDEE27CF19 (void);
-// 0x00000022 System.Object CanvasManager/<TakeScreenshot>d__14::System.Collections.IEnumerator.get_Current()
-extern void U3CTakeScreenshotU3Ed__14_System_Collections_IEnumerator_get_Current_m5E476D42D3404B932DD7DA1249708677506B59B7 (void);
+// 0x0000001D System.Void CanvasManager/<TakeScreenshot>d__16::.ctor(System.Int32)
+extern void U3CTakeScreenshotU3Ed__16__ctor_m412890F555C43613E780A0F2C534575529266675 (void);
+// 0x0000001E System.Void CanvasManager/<TakeScreenshot>d__16::System.IDisposable.Dispose()
+extern void U3CTakeScreenshotU3Ed__16_System_IDisposable_Dispose_mBD38FF52470A5FC58088F92E1FBED275DB26C2C8 (void);
+// 0x0000001F System.Boolean CanvasManager/<TakeScreenshot>d__16::MoveNext()
+extern void U3CTakeScreenshotU3Ed__16_MoveNext_mD9101A0784437DD065682E591FAF95AAAB3C45A8 (void);
+// 0x00000020 System.Object CanvasManager/<TakeScreenshot>d__16::System.Collections.Generic.IEnumerator<System.Object>.get_Current()
+extern void U3CTakeScreenshotU3Ed__16_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mF1C58BAE3E9F09A665CD888450DB3849DB76029B (void);
+// 0x00000021 System.Void CanvasManager/<TakeScreenshot>d__16::System.Collections.IEnumerator.Reset()
+extern void U3CTakeScreenshotU3Ed__16_System_Collections_IEnumerator_Reset_m629D0A1BEEBEB8D8DEB5BDA2C1B4940F7D8594E3 (void);
+// 0x00000022 System.Object CanvasManager/<TakeScreenshot>d__16::System.Collections.IEnumerator.get_Current()
+extern void U3CTakeScreenshotU3Ed__16_System_Collections_IEnumerator_get_Current_mFA50AF8D389403D137702298A221A176FEA89DC9 (void);
 // 0x00000023 System.Void CanvasManager/<>c::.cctor()
 extern void U3CU3Ec__cctor_m4BCF9714CC986A3F04A193F2E91C49FA17F12D42 (void);
 // 0x00000024 System.Void CanvasManager/<>c::.ctor()
 extern void U3CU3Ec__ctor_m86D53713FA61792319A59AA94EFC311098F2ACEC (void);
-// 0x00000025 System.Single CanvasManager/<>c::<ShuffleCanvases>b__15_0(System.Int32)
-extern void U3CU3Ec_U3CShuffleCanvasesU3Eb__15_0_m1B296BC4578DED1880FDFBBEF739F4463DD1AA89 (void);
+// 0x00000025 System.Single CanvasManager/<>c::<ShuffleCanvases>b__17_0(System.Int32)
+extern void U3CU3Ec_U3CShuffleCanvasesU3Eb__17_0_m970E90ED80D93D5FD9B04CB4F2CA79E89C954AC9 (void);
 // 0x00000026 System.Void ConfigMenu::Start()
 extern void ConfigMenu_Start_m81B300212FE69EA19C23961DA4BCB0C1F200F51B (void);
 // 0x00000027 System.Void ConfigMenu::OnEnable()
@@ -212,15 +212,15 @@ static Il2CppMethodPointer s_methodPointers[85] =
 	CanvasManager_positionIndexToLetter_mD4802CDD4D1668F400D62F384E991BDC1C8895C1,
 	CanvasManager_CalculateAmountOfRules_mD9719C00AB440454BC1AD417153EE06573102AA6,
 	CanvasManager__ctor_m8D01C316B4C83FEB1E2FF919AB552C47AC9FB33F,
-	U3CTakeScreenshotU3Ed__14__ctor_mEB9F97C61C36801D54B589852C03F5714C19EC4D,
-	U3CTakeScreenshotU3Ed__14_System_IDisposable_Dispose_mDF2149D3924116B0268D4AC613461CE11F81811A,
-	U3CTakeScreenshotU3Ed__14_MoveNext_mD784BA38BBF1B278D57DE2D02DECB7E9D9F28F81,
-	U3CTakeScreenshotU3Ed__14_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m0D8DA74C996AD9D852AD538DCF6AE6A1FA18333F,
-	U3CTakeScreenshotU3Ed__14_System_Collections_IEnumerator_Reset_mBEC49E9E2B7BB75218F5349FFA3CA3FDEE27CF19,
-	U3CTakeScreenshotU3Ed__14_System_Collections_IEnumerator_get_Current_m5E476D42D3404B932DD7DA1249708677506B59B7,
+	U3CTakeScreenshotU3Ed__16__ctor_m412890F555C43613E780A0F2C534575529266675,
+	U3CTakeScreenshotU3Ed__16_System_IDisposable_Dispose_mBD38FF52470A5FC58088F92E1FBED275DB26C2C8,
+	U3CTakeScreenshotU3Ed__16_MoveNext_mD9101A0784437DD065682E591FAF95AAAB3C45A8,
+	U3CTakeScreenshotU3Ed__16_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mF1C58BAE3E9F09A665CD888450DB3849DB76029B,
+	U3CTakeScreenshotU3Ed__16_System_Collections_IEnumerator_Reset_m629D0A1BEEBEB8D8DEB5BDA2C1B4940F7D8594E3,
+	U3CTakeScreenshotU3Ed__16_System_Collections_IEnumerator_get_Current_mFA50AF8D389403D137702298A221A176FEA89DC9,
 	U3CU3Ec__cctor_m4BCF9714CC986A3F04A193F2E91C49FA17F12D42,
 	U3CU3Ec__ctor_m86D53713FA61792319A59AA94EFC311098F2ACEC,
-	U3CU3Ec_U3CShuffleCanvasesU3Eb__15_0_m1B296BC4578DED1880FDFBBEF739F4463DD1AA89,
+	U3CU3Ec_U3CShuffleCanvasesU3Eb__17_0_m970E90ED80D93D5FD9B04CB4F2CA79E89C954AC9,
 	ConfigMenu_Start_m81B300212FE69EA19C23961DA4BCB0C1F200F51B,
 	ConfigMenu_OnEnable_m35E0D7CD6B4D0129CCC3610CF1FA0145B439E1BF,
 	ConfigMenu_Generate_m2D86F8C6B7558F84FC7BDFA0C3551222369A94A9,

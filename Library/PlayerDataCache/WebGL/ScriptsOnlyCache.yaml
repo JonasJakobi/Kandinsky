@@ -55,45 +55,45 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 652}
-    - Class: 114
       Script: {instanceID: 654}
     - Class: 114
       Script: {instanceID: 656}
     - Class: 114
-      Script: {instanceID: 678}
+      Script: {instanceID: 658}
     - Class: 114
       Script: {instanceID: 680}
     - Class: 114
-      Script: {instanceID: 2162}
+      Script: {instanceID: 682}
     - Class: 114
-      Script: {instanceID: 2576}
+      Script: {instanceID: 2164}
     - Class: 114
-      Script: {instanceID: 2782}
+      Script: {instanceID: 2578}
     - Class: 114
-      Script: {instanceID: 3484}
+      Script: {instanceID: 2784}
     - Class: 114
-      Script: {instanceID: 3752}
+      Script: {instanceID: 3486}
     - Class: 114
-      Script: {instanceID: 4046}
+      Script: {instanceID: 3754}
     - Class: 114
-      Script: {instanceID: 4300}
+      Script: {instanceID: 4048}
     - Class: 114
-      Script: {instanceID: 4434}
+      Script: {instanceID: 4302}
     - Class: 114
-      Script: {instanceID: 4494}
+      Script: {instanceID: 4436}
     - Class: 114
-      Script: {instanceID: 4798}
+      Script: {instanceID: 4496}
     - Class: 114
-      Script: {instanceID: 4992}
+      Script: {instanceID: 4802}
     - Class: 114
-      Script: {instanceID: 5550}
+      Script: {instanceID: 4996}
     - Class: 114
-      Script: {instanceID: 5698}
+      Script: {instanceID: 5554}
     - Class: 114
-      Script: {instanceID: 6002}
+      Script: {instanceID: 5702}
     - Class: 114
-      Script: {instanceID: 6012}
+      Script: {instanceID: 6006}
+    - Class: 114
+      Script: {instanceID: 6016}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -427,7 +427,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: be052eb61958c89f81c3d243539cb938
+      Hash: bbb2176a0e0fd043d0e65c3c7e0caad9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CanvasManager

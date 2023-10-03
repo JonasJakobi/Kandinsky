@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
 /// Each instance of ShapeRule can be specified to a type or group of kadinskyShapes and then specifying several rules for that type. 
-/// TODO implement further rules. 
 /// </summary>
 [System.Serializable]
 public class ShapeRule 
@@ -182,7 +181,7 @@ public class ShapeRule
     private bool checkPositionOfOneShape(KadinskyShape shape,KadinskyShape newShape)
     {
         //Check for all directions
-        float padding = 1.4f;
+        float padding = 1.8f;
         if (direction.Equals( Direction.Above))
         {
             if (shape.position.y + padding < newShape.position.y) return true;
