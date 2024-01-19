@@ -3,29 +3,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-/// Each instance of ShapeRule can be specified to a type or group of kadinskyShapes and then specifying several rules for that type. 
+/// Each instance of ShapeRule can be specified to a type or group of kadinskyShapes and then specifies several rules for that type. 
 /// </summary>
 [System.Serializable]
 public class ShapeRule 
 {
     [Header("The rule should apply to...")]
     [Tooltip("Shape type that this rule applies to")]
+    /// <summary>
+    /// Shape type that this rule applies to
+    /// </summary>
     public ShapeType shapeType;
 
     [Tooltip("Color that the rule applies to ")]
+    /// <summary>
+    /// Color that the rule applies to
+    /// </summary>
     public ColorType color;
 
     [Header("Restrict maximum amount allowed?")]
     [Tooltip("if enabled, the maximum amount of this type can be specified")]
+    /// <summary>
+    /// if enabled, the maximum amount of this type can be specified
+    /// </summary>
     public bool maxAmountRule = true;
-    
+
     [Tooltip("The maximum amount of this object that can be on the canvas at once.  ")]
+    /// <summary>
+    /// The maximum amount of this object that can be on the canvas at once.
+    /// </summary>
     public int maxCount;
     
     [Header("Restrict minimum amount allowed?")]
     [Tooltip("if enabled, the minimum amount of this type can be specified")]
+    /// <summary>
+    /// if enabled, the minimum amount of this type can be specified
+    /// </summary>
     public bool minAmountRule = true;
-    
+    /// <summary>
+    /// The minimum amount of this object that can be on the canvas at once.
+    /// </summary>
     [Tooltip("The minimum amount of this object that can be on the canvas at once.  ")]
     public int minCount;
 
@@ -52,6 +69,9 @@ public class ShapeRule
     /// the color type to which to place to 
     /// </summary>
     public ColorType colorToPositionTo;
+    [Header("DONT CHANGE - Gets checked automatically for secondary position rule")]
+    public bool IsASecondaryRule = false;
+
 
 
     /// <summary>

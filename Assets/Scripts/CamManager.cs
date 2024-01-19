@@ -14,7 +14,6 @@ public class CamManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //1:1 ratio for square Kadinsky Images.
         cam.aspect = aspectratio;
     }
 

@@ -55,6 +55,7 @@ public class ShapeRuleCreator
         newRule.minAmountRule = false;
         newRule.maxAmountRule = false;
         newRule.direction = Utils.OppositeDirection(positionRule.direction);
+        newRule.IsASecondaryRule = true;
         return newRule;
     }
 
@@ -126,5 +127,31 @@ public class ShapeRuleCreator
         newRule.colorToPositionTo = r.colorToPositionTo;
         return newRule;
     }
+
+    public static bool IsRuleValid(ShapeRule r){
+        if(r.color == ColorType.AllColors && r.shapeType == ShapeType.AllShapes){
+            return false;
+        }
+        if(r.positionRules){
+            if(r.colorToPositionTo == ColorType.AllColors && r.shapeToPositionTo == ShapeType.AllShapes){
+                return false;
+            }
+            if(r.color == r.colorToPositionTo && r.shapeType == r.shapeToPositionTo){
+                return false;
+            }
+        }
+        if(r.minAmountRule){
+            if(r.minCount < 1 || r.minCount > 7) { //TODO make this dynamic
+                return false;
+            }
+        }
+        if(r.maxAmountRule){
+            if(r.maxCount < 1){
+                return false;
+            }
+        }
+        return true;
+    }
+
 
 }

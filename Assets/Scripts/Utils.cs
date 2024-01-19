@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-/// Contains a view general helpful scripts. 
+/// Contains a few general helpful scripts that are used in multiple places
 /// </summary>
 public class Utils 
 {

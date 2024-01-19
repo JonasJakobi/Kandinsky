@@ -4,12 +4,17 @@ ScriptsOnlyBuild:
     - CamManager
     - Canvas
     - CanvasManager
-    - ConfigMenu
+    - RuleCreationUIManager
     - RuleExplanations
+    - SetActiveReversed
+    - UIRule
+    - UIRuleSelector
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
+    - TMPro.TMP_Dropdown
     - TMPro.TMP_FontAsset
+    - TMPro.TMP_InputField
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
@@ -22,10 +27,20 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.LayoutElement
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.RectMask2D
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
+    - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
-    Assets/Scenes/StandardKandinskyScene.unity:
+    Assets/Scenes/DefaultScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -55,45 +70,65 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 654}
+      Script: {instanceID: 1550}
     - Class: 114
-      Script: {instanceID: 656}
-    - Class: 114
-      Script: {instanceID: 658}
-    - Class: 114
-      Script: {instanceID: 680}
-    - Class: 114
-      Script: {instanceID: 682}
+      Script: {instanceID: 1710}
     - Class: 114
       Script: {instanceID: 2164}
     - Class: 114
       Script: {instanceID: 2578}
     - Class: 114
+      Script: {instanceID: 2586}
+    - Class: 114
       Script: {instanceID: 2784}
     - Class: 114
-      Script: {instanceID: 3486}
+      Script: {instanceID: 2982}
     - Class: 114
-      Script: {instanceID: 3754}
+      Script: {instanceID: 3060}
     - Class: 114
-      Script: {instanceID: 4048}
+      Script: {instanceID: 3488}
     - Class: 114
-      Script: {instanceID: 4302}
+      Script: {instanceID: 3756}
     - Class: 114
-      Script: {instanceID: 4436}
+      Script: {instanceID: 3824}
     - Class: 114
-      Script: {instanceID: 4496}
+      Script: {instanceID: 4034}
     - Class: 114
-      Script: {instanceID: 4802}
+      Script: {instanceID: 4050}
     - Class: 114
-      Script: {instanceID: 4996}
+      Script: {instanceID: 4304}
     - Class: 114
-      Script: {instanceID: 5554}
+      Script: {instanceID: 4438}
     - Class: 114
-      Script: {instanceID: 5702}
+      Script: {instanceID: 4498}
     - Class: 114
-      Script: {instanceID: 6006}
+      Script: {instanceID: 4804}
     - Class: 114
-      Script: {instanceID: 6016}
+      Script: {instanceID: 4812}
+    - Class: 114
+      Script: {instanceID: 4870}
+    - Class: 114
+      Script: {instanceID: 4998}
+    - Class: 114
+      Script: {instanceID: 5250}
+    - Class: 114
+      Script: {instanceID: 5556}
+    - Class: 114
+      Script: {instanceID: 5704}
+    - Class: 114
+      Script: {instanceID: 6018}
+    - Class: 114
+      Script: {instanceID: 6028}
+    - Class: 114
+      Script: {instanceID: 6440}
+    - Class: 114
+      Script: {instanceID: 6892}
+    - Class: 114
+      Script: {instanceID: 7074}
+    - Class: 114
+      Script: {instanceID: 7730}
+    - Class: 114
+      Script: {instanceID: 51956}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -115,16 +150,16 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UIElements
-    className: PanelRaycaster
-  - hash:
-      serializedVersion: 2
       Hash: a6e561615949734e9f12f9b61661f43e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UIElements
+    className: PanelRaycaster
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -313,6 +348,12 @@ ScriptsOnlyBuild:
     className: UnityOnDropdownValueChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 060d60c24b32083074d9d88f8ac17aaf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UIRule
+  - hash:
+      serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -427,7 +468,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerExitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: bbb2176a0e0fd043d0e65c3c7e0caad9
+      Hash: 41a31451b363227a5e280b487cb99c44
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CanvasManager
@@ -517,7 +558,7 @@ ScriptsOnlyBuild:
     className: UnityOnCancelMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 93fd9851693be5b006e9a227f547cc6c
+      Hash: d1244fee5ecfc35a246db613039b479a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: RuleExplanations
@@ -529,7 +570,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerClickMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 414e5995cb712dadfd95d197ba84a115
+      Hash: 7a94591e7903c193f9f19e9d7fa028ef
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Canvas
@@ -691,12 +732,6 @@ ScriptsOnlyBuild:
     className: UnityOnMouseUpAsButtonMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 279138f9bfb9d51923f97c3a8f9054d2
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ConfigMenu
-  - hash:
-      serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -835,6 +870,12 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: c4d809737c1b6e9fd7f8d47c3c520c96
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RuleCreationUIManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -901,6 +942,12 @@ ScriptsOnlyBuild:
     className: UnityOnToggleValueChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 9abf78e383dd21ff0eae4e0a681121cd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UIRuleSelector
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -917,7 +964,19 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 076b9c71dcd6b133c8b40a2e00696bcf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RuleCreationUIDeprecated
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SetActiveReversed
   platform: 20
   scenePathNames:
-  - Assets/Scenes/StandardKandinskyScene.unity
+  - Assets/Scenes/DefaultScene.unity
   playerPath: F:/programme/Unity/KadinskyShapes/Build

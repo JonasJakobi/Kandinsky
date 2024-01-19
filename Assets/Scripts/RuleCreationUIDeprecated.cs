@@ -5,9 +5,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.UIElements.StyleSheets;
-
-
-public class ConfigMenu : MonoBehaviour
+/// <summary>
+/// UI system not in use anymore. 
+/// </summary>
+public class RuleCreationUIDeprecated : MonoBehaviour
 {
     [SerializeField] private CanvasManager canvasManager;
     [SerializeField] private UIDocument document;

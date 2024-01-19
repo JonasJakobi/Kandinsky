@@ -320,11 +320,15 @@
 "Assets/Scripts/CamManager.cs"
 "Assets/Scripts/Canvas.cs"
 "Assets/Scripts/CanvasManager.cs"
-"Assets/Scripts/ConfigMenu.cs"
 "Assets/Scripts/KadinskyShape.cs"
+"Assets/Scripts/RuleCreationUIDeprecated.cs"
+"Assets/Scripts/RuleCreationUIManager.cs"
 "Assets/Scripts/RuleExplanations.cs"
+"Assets/Scripts/SetActiveReversed.cs"
 "Assets/Scripts/ShapeRule.cs"
 "Assets/Scripts/ShapeRuleCreator.cs"
+"Assets/Scripts/UIRule.cs"
+"Assets/Scripts/UIRuleSelector.cs"
 "Assets/Scripts/Utils.cs"
 -langversion:9.0
 

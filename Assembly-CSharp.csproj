@@ -36,19 +36,23 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\UIRule.cs" />
      <Compile Include="Assets\Scripts\CanvasManager.cs" />
+     <Compile Include="Assets\Scripts\SetActiveReversed.cs" />
      <Compile Include="Assets\Scripts\RuleExplanations.cs" />
      <Compile Include="Assets\Scripts\Canvas.cs" />
      <Compile Include="Assets\Scripts\ShapeRuleCreator.cs" />
      <Compile Include="Assets\Scripts\CamManager.cs" />
+     <Compile Include="Assets\Scripts\RuleCreationUIDeprecated.cs" />
      <Compile Include="Assets\Scripts\KadinskyShape.cs" />
      <Compile Include="Assets\Scripts\ShapeRule.cs" />
-     <Compile Include="Assets\Scripts\ConfigMenu.cs" />
      <Compile Include="Assets\Scripts\Utils.cs" />
+     <Compile Include="Assets\Scripts\RuleCreationUIManager.cs" />
+     <Compile Include="Assets\Scripts\UIRuleSelector.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
-     <None Include="Assets\UI\NewUSSFile.uss" />
+     <None Include="Assets\Old UI System\NewUSSFile.uss" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
@@ -61,7 +65,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-     <None Include="Assets\UI\ConfigMenu.uxml" />
+     <None Include="Assets\Old UI System\ConfigMenu.uxml" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
