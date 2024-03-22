@@ -49,7 +49,7 @@ public class CanvasManager : MonoBehaviour
     
     private void Start()
     {
-        CalculateAmountOfRules();
+
         currentScreenshotNumber = 1;
         UpdateCanvases();
         
@@ -127,6 +127,9 @@ public class CanvasManager : MonoBehaviour
             explanations.UpdateUIForExplanations();
             explanations.PrintExplanations(canvases[0].rules, verbosity);
         }
+        //Print Amount of Rules
+        Debug.Log("TotalAmountOfRules: " + RulesAmountCalculator.CalculateAmountOfRulesOverall());
+        Debug.Log("Amount of Rules after rule 1 and verbosity: " + RulesAmountCalculator.CalculateRulesPossibleAfterHint(canvases[0].rules[0], verbosity));
     }
     private void CreateHints(){
         if(!reverseOneCanvas){
@@ -207,21 +210,7 @@ public class CanvasManager : MonoBehaviour
     }
     
 
-    public void CalculateAmountOfRules()
-    {
-        //The only rules we want are: Is x over / left of / right of y
-        // more x then y, less x then y
-       //x and y can both be any color, any shape, or any combination of both
-        int totalRules = 0;
-        int n1  = System.Enum.GetValues(typeof(ShapeType)).Length - 1;
-        int n2 = System.Enum.GetValues(typeof(ColorType)).Length - 1;
-        totalRules = 6 * (Utils.BinominalCoefficient(n1, 2) + Utils.BinominalCoefficient(n2, 2));
-     
-        
-        Debug.Log("Total Rules: " + totalRules);
-
-
-    }
+   
 
     public void SetReverseOneCanvas(bool value){
         reverseOneCanvas = value;

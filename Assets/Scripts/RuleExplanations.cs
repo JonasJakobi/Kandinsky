@@ -9,7 +9,7 @@ using UnityEngine;
 public class RuleExplanations : MonoBehaviour
 {
 
-    [SerializeField]
+    [SerializeField] 
     GameObject[] textboxes;
     [Header("UI Configurations")]
     [SerializeField]
@@ -115,12 +115,12 @@ public class RuleExplanations : MonoBehaviour
         {
             return answer + (min ? "minimum": "maximum") +  "  amount of certain objects";
         }
-        else if(verbosity == 3 || verbosity == 4)
+        else if(verbosity == 3)
         {
             return answer + (min ? "minimum" : "maximum") + " amount of " + getKandinskyShapeString(type, color);
         }
         //Full Explanation? f.e. "there has to be a minimum of 3 red squares"
-        else if (verbosity == 5){
+        else if (verbosity == 4){
             return (min ? "minimum" : "maximum") + " amount of " + getKandinskyShapeString(type, color) + " is " + minAmount.ToString();
         }
         else{
@@ -141,18 +141,14 @@ public class RuleExplanations : MonoBehaviour
         }
         else if(verbosity == 2)
         {
-            return answer + "certain objects in relation to certain other objects";
+            return answer + getKandinskyShapeString(shape, color) + " in relation to certain other objects";
         }
         else if(verbosity == 3)
         {
-            return answer + getKandinskyShapeString(shape, color) + "in relation to certain other objects";
-        }
-        else if(verbosity == 4)
-        {
-            return answer + getKandinskyShapeString(shape, color) + "in relation to " + getKandinskyShapeString(shapeToPositionTo, colorToPositionTo) + "";
+            return answer + getKandinskyShapeString(shape, color) + " in relation to " + getKandinskyShapeString(shapeToPositionTo, colorToPositionTo) + "";
         }
         //verbosity 5 which is full explanation? f.e. "Red squares have to be above blue triangles."
-        else if (verbosity == 5)
+        else if (verbosity == 4)
         {
             return getKandinskyShapeString(shape, color) + "are " + getDirectionString(direction) + getKandinskyShapeString(shapeToPositionTo, colorToPositionTo);
         }

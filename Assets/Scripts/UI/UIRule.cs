@@ -14,7 +14,8 @@ public class UIRule : MonoBehaviour
 
 
     public void SetRule(ShapeRule rule){
-        text.text = RuleExplanations.GetExplanation(rule, 5);
+        //verbosity of 4 is the full explanation of the rule 
+        text.text = RuleExplanations.GetExplanation(rule, 4);
     }
     //Delete when button pressed
     public void DeleteRule(){
