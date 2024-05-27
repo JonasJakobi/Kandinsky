@@ -60,9 +60,14 @@ public class RulesAmountCalculator : MonoBehaviour {
 
             }
             //Min/max Rules --> will now just be more than or less than
-            else{
-                amountOfRelations = 1;
-
+            else if (rule.amountRules){
+                amountOfRelations = 2;
+                if(rule.shapeType == ShapeType.AllShapes){
+                    shapeAmount = 0;
+                }
+                else{
+                    colorAmount = 0;
+                }
             }
         }
         if (verbosity == 3){
@@ -73,8 +78,10 @@ public class RulesAmountCalculator : MonoBehaviour {
                 shapeAmount = 0;
                 colorAmount = 0;
             }
-            else{
-                amountOfRelations = 1; //PROBLEM : do we
+            else if (rule.amountRules){
+                amountOfRelations = 2; //PROBLEM : do we
+                shapeAmount = 0;
+                colorAmount = 0;
             }
         }
         return CalculateTotalRuleAmount(amountOfRelations, shapeAmount, colorAmount);

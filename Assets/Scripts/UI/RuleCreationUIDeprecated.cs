@@ -1,4 +1,5 @@
-using System;
+
+/*using System;
 using System.CodeDom.Compiler;
 using System.Collections;
 using System.Collections.Generic;
@@ -41,7 +42,7 @@ public class RuleCreationUIDeprecated : MonoBehaviour
 
         Generate();
     }
-    */
+    
 
     private void OnEnable() {
         Generate();
@@ -107,7 +108,7 @@ public class RuleCreationUIDeprecated : MonoBehaviour
         }
         root.Add(ruleBox);
     }
-
+    
     ShapeRule CreateShapeRuleFromFields(){
         ShapeType shape = Utils.StringToShapeType(ruleFields.shape.value);
         ColorType color = Utils.StringToColorType(ruleFields.color.value);
@@ -214,3 +215,5 @@ public class RuleCreationUIDeprecated : MonoBehaviour
 
   
 }
+
+*/

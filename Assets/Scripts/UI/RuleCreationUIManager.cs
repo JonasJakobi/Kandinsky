@@ -29,10 +29,15 @@ public class RuleCreationUIManager : MonoBehaviour
         //Populate the dropdowns with the enum values
 
         shapeDropdown.AddOptions(new List<string>(System.Enum.GetNames(typeof(ShapeType))));
+        //Set the last element to All Shapes
+        shapeDropdown.options[shapeDropdown.options.Count - 1].text = "All Shapes";
         colorDropdown.AddOptions(new List<string>(System.Enum.GetNames(typeof(ColorType))));
+        colorDropdown.options[colorDropdown.options.Count - 1].text = "All Colors";
         positioningDropdown.AddOptions(new List<string>(System.Enum.GetNames(typeof(Direction))));
         otherShapeDropdown.AddOptions(new List<string>(System.Enum.GetNames(typeof(ShapeType))));
+        otherShapeDropdown.options[otherShapeDropdown.options.Count - 1].text = "All Shapes";
         otherColorDropdown.AddOptions(new List<string>(System.Enum.GetNames(typeof(ColorType))));
+        otherColorDropdown.options[otherColorDropdown.options.Count - 1].text = "All Colors";
         //Set the kind of rule to minimum amount by default to update UI accordingly
         uIRuleSelector.ChangeRuleElements(0);
     }
@@ -42,10 +47,8 @@ public class RuleCreationUIManager : MonoBehaviour
         ShapeRule newRule = ShapeRuleCreator.CreateShapeRule(
             (ShapeType)shapeDropdown.value,
             (ColorType)colorDropdown.value,
-            whichRuleDropdown.value == 0 ? true : false,
-            TryParseInputField(minInputField),
-            whichRuleDropdown.value == 1 ? true : false,
-            TryParseInputField(maxInputField),
+            whichRuleDropdown.value == 0 || whichRuleDropdown.value == 1 ? true : false, //Amount Rule
+             whichRuleDropdown.value == 0 ? true : false, //MoreThan Rule
             whichRuleDropdown.value == 2 ? true : false,
             (Direction)positioningDropdown.value,
             (ShapeType)otherShapeDropdown.value,
@@ -65,9 +68,19 @@ public class RuleCreationUIManager : MonoBehaviour
 
     }
 
+    public void CreateUIForLoadedRules(ShapeRule[] loadedRules){
+        foreach(ShapeRule rule in loadedRules){
+            rules.Add(rule);
+            GameObject newRuleUI = Instantiate(ruleUIPrefab, currentRulesUIParent.transform);
+            newRuleUI.GetComponent<UIRule>().SetRule(rule);
+            newRuleUI.GetComponent<UIRule>().OnRuleDeleted.AddListener(() => RemoveRule(rule));
+        }
+    }
+
     public void ExportRules(){
         canvasManager.SetNewRules(rules.ToArray());
     }
+ 
 
     public void RemoveRule(ShapeRule rule){
         rules.Remove(rule);

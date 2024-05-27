@@ -21,30 +21,6 @@ public class ShapeRule
     /// </summary>
     public ColorType color;
 
-    [Header("Restrict maximum amount allowed?")]
-    [Tooltip("if enabled, the maximum amount of this type can be specified")]
-    /// <summary>
-    /// if enabled, the maximum amount of this type can be specified
-    /// </summary>
-    public bool maxAmountRule = true;
-
-    [Tooltip("The maximum amount of this object that can be on the canvas at once.  ")]
-    /// <summary>
-    /// The maximum amount of this object that can be on the canvas at once.
-    /// </summary>
-    public int maxCount;
-    
-    [Header("Restrict minimum amount allowed?")]
-    [Tooltip("if enabled, the minimum amount of this type can be specified")]
-    /// <summary>
-    /// if enabled, the minimum amount of this type can be specified
-    /// </summary>
-    public bool minAmountRule = true;
-    /// <summary>
-    /// The minimum amount of this object that can be on the canvas at once.
-    /// </summary>
-    [Tooltip("The minimum amount of this object that can be on the canvas at once.  ")]
-    public int minCount;
 
     [Tooltip("if enabled,  this type has to be in a direction of another type.")]
     [Header("Restrict position relative to other shapes and colors?")]
@@ -52,6 +28,9 @@ public class ShapeRule
     /// if enabled,  this type has to be in a direction of another type.
     /// </summary>
     public bool positionRules = true;
+
+    public bool amountRules = false;
+    public bool moreThan = false;
     [Header("Our shape should be ..... of the other.")]
     [Tooltip("The direction relative to the other that the new shape has to be. ")]
     /// <summary>
@@ -84,13 +63,13 @@ public class ShapeRule
         
     }
     //-----------------The two rule methods 
-    // --- Explanation:--- The distinction into two different methdos are neccesary.
+    // --- Explanation:--- The distinction into two different methods is neccesary.
     // An example why: if we say triangles have to be to the left of squares, the randomly generated triangles are not likely to be,
-    // while f.e.alll circles are valid so adding this rule will result in no squares and triangles appearing anymore. 
+    // while f.e. all circles are valid so adding this rule will result in no squares and triangles appearing anymore. 
     //Splitting the methods ensures a shape is "locked in" and we keep randomly searching for a position to place it correctly. 
     
     /// <summary>
-    /// Rules that, when unsecessful, demand a new shape or color to be generated. 
+    /// Rules that, when unsuccessful, demand a new shape or color to be generated. 
     /// </summary>
     /// <param name="shapes">All shapes</param>
     /// <param name="newShape">The new shape to check</param>
@@ -99,20 +78,26 @@ public class ShapeRule
     {
         
         List<RulesResult> results = new List<RulesResult>();
-        if (maxAmountRule)
+        if (amountRules)
         {
-            results.Add(CheckAmountRules(shapes, newShape, true));
-        }
-        if (minAmountRule)
-        {
-            results.Add(CheckAmountRules(shapes, newShape, false));
+            if (moreThan)
+            {
+                results.Add(CheckAmountRules(shapes, newShape, false, false));
+                results.Add(CheckAmountRules(shapes, newShape, true, true));
+            }
+            else
+            {
+                results.Add(CheckAmountRules(shapes, newShape, true, false));
+                results.Add(CheckAmountRules(shapes, newShape, false, true));
+            }
+            
         }
         //if there were no rules to check, just return already.
         if (results.Count == 0)
         {
             return RulesResult.None;
         }
-        //For every rule we checked, we have to see if any one was unsuccesful or succesful.( Currently, for one rule,this is overengineeed. but if more rules are added, it is necessary.)
+        //For every rule we checked, we have to see if any one was unsuccesful or succesful.( Currently, for one rule,this is overengineered. but if more rules are added, it is necessary.)
         bool everFalse = false;
         bool everTrue = false;
         foreach (var ans in results)
@@ -233,9 +218,12 @@ public class ShapeRule
     /// <param name="newShape"></param>
     /// <param name="maxAmount">true - we are checking for max amount right now</param>
     /// <returns></returns>
-    public RulesResult CheckAmountRules(List<KadinskyShape> shapes, KadinskyShape newShape, bool maxAmount)
+    public RulesResult CheckAmountRules(List<KadinskyShape> shapes, KadinskyShape newShape, bool maxAmount, bool secondaryObject)
     {
-      
+        int maxCount = 2;
+        int minCount = 3;
+        var shapeToCheck = secondaryObject ?   shapeToPositionTo : shapeType;
+        var colorToCheck = secondaryObject ?   colorToPositionTo : color;
         // Initialize a counter for the number of shapes of the specified type
         int shapeTypeCount = 0;
 
@@ -243,11 +231,11 @@ public class ShapeRule
         foreach (KadinskyShape shape in shapes)
         {
             // If the current shape is of the specified type, increment the counter
-            if (Utils.AreShapesEqual(shape.shape, shapeType))
+            if (Utils.AreShapesEqual(shape.shape, shapeToCheck))
             {
-                if (Utils.AreColorsEqual(shape.color, color))
+                if (Utils.AreColorsEqual(shape.color, colorToCheck))
                 {
-                    //Debug.Log("Found a shape and color tht already exists.");
+                    //Debug.Log("Found a shape and color that already exists.");
                     shapeTypeCount++;
                 }
                     
@@ -272,7 +260,7 @@ public class ShapeRule
             //if the min amount hasnt been reached yet, we only allow this shape and color to be generated.
             if (shapeTypeCount < minCount)
             {
-                if (Utils.AreShapesEqual(newShape.shape, shapeType) && Utils.AreColorsEqual(newShape.color, color))
+                if (Utils.AreShapesEqual(newShape.shape, shapeToCheck) && Utils.AreColorsEqual(newShape.color, colorToCheck))
                 {
                     return RulesResult.AllTrue;
                 }
@@ -324,3 +312,4 @@ public enum Direction
 {
     Left, Right, Above, Below
 }
+

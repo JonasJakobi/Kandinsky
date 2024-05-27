@@ -91,41 +91,37 @@ public class RuleExplanations : MonoBehaviour
             {
                 answer= (GeneratePositionRuleExplanation(verbosity, rule.shapeType, rule.color, rule.direction, rule.shapeToPositionTo, rule.colorToPositionTo).TrimEnd() + ".");
             }
-        if (rule.minAmountRule)
+        if (rule.amountRules)
             {
-                answer = (GenerateAmountRuleExplanation(verbosity, rule.shapeType, rule.color, rule.minCount, true).TrimEnd() + ".");
-            }
-        if (rule.maxAmountRule)
-            {
-                answer = (GenerateAmountRuleExplanation(verbosity, rule.shapeType, rule.color, rule.maxCount, false).TrimEnd() + ".");
+                answer = (GenerateAmountRuleExplanation(verbosity, rule.shapeType, rule.color, rule.moreThan, rule.shapeToPositionTo, rule.colorToPositionTo).TrimEnd() + ".");
             }
         //Capialize first letter
         answer = char.ToUpper(answer[0]) + answer.Substring(1);
         return answer;
 
     }
-    private static string GenerateAmountRuleExplanation(int verbosity, ShapeType type, ColorType color, int minAmount, bool min)
-    {
-        string answer = "The rule applies to the ";
-        if(verbosity == 1)
-        {
-            return answer + "amount of certain objects";
-        }
-        else if(verbosity == 2)
-        {
-            return answer + (min ? "minimum": "maximum") +  "  amount of certain objects";
-        }
-        else if(verbosity == 3)
-        {
-            return answer + (min ? "minimum" : "maximum") + " amount of " + getKandinskyShapeString(type, color);
-        }
-        //Full Explanation? f.e. "there has to be a minimum of 3 red squares"
-        else if (verbosity == 4){
-            return (min ? "minimum" : "maximum") + " amount of " + getKandinskyShapeString(type, color) + " is " + minAmount.ToString();
-        }
-        else{
-            return "---- INVALID VERBOSITY, there seems to be some error. ------";
-        }
+    private static string GenerateAmountRuleExplanation(int verbosity, ShapeType shape, ColorType color, bool moreThan, ShapeType secondShape, ColorType secondColor )
+    { // TODO URGENT change for new rule
+        string answer = "The rule applies to the amount of ";
+      if (verbosity == 1){
+            return answer + "certain objects";
+      }
+      else if (verbosity == 2){
+            return answer + getKandinskyShapeString(shape, color) + "in relation to certain other objects";
+      }
+      else if (verbosity == 3)
+      {
+          return answer + getKandinskyShapeString(shape, color) + "in relation to " + getKandinskyShapeString(secondShape, secondColor);
+      }
+      else if (verbosity == 4)
+      {
+          return getKandinskyShapeString(shape, color) + "are " + (moreThan ? "more" : "less") + " than " + getKandinskyShapeString(secondShape, secondColor);
+      }
+      else
+      {
+          return "---- INVALID VERBOSITY, there seems to be some error. ------";
+      }
+ 
         
     }
 
@@ -141,11 +137,11 @@ public class RuleExplanations : MonoBehaviour
         }
         else if(verbosity == 2)
         {
-            return answer + getKandinskyShapeString(shape, color) + " in relation to certain other objects";
+            return answer + getKandinskyShapeString(shape, color) + "in relation to certain other objects";
         }
         else if(verbosity == 3)
         {
-            return answer + getKandinskyShapeString(shape, color) + " in relation to " + getKandinskyShapeString(shapeToPositionTo, colorToPositionTo) + "";
+            return answer + getKandinskyShapeString(shape, color) + "in relation to " + getKandinskyShapeString(shapeToPositionTo, colorToPositionTo) + "";
         }
         //verbosity 5 which is full explanation? f.e. "Red squares have to be above blue triangles."
         else if (verbosity == 4)
@@ -182,7 +178,7 @@ public class RuleExplanations : MonoBehaviour
         //for any / all colors we define at the end.
         if (color.Equals(ColorType.AllColors))
         {
-            answer += "of any color";
+            answer += "of any color ";
         }
 
         return answer;

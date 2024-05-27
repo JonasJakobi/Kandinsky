@@ -52,8 +52,6 @@ public class ShapeRuleCreator
         newRule.shapeToPositionTo = shapeA;
         newRule.colorToPositionTo = colorA;
         newRule.positionRules = true;
-        newRule.minAmountRule = false;
-        newRule.maxAmountRule = false;
         newRule.direction = Utils.OppositeDirection(positionRule.direction);
         newRule.IsASecondaryRule = true;
         return newRule;
@@ -73,16 +71,8 @@ public class ShapeRuleCreator
                 rule.direction = Utils.OppositeDirection(rule.direction);
             }
             //If rule is max, turn to min and increase amount by 1
-            if(rule.maxAmountRule){
-                rule.maxAmountRule = false;
-                rule.minAmountRule = true;
-                rule.minCount = rule.maxCount + 1;
-            }
-            //If rule is min, turn to max and decrease amount by 1
-            else if(rule.minAmountRule){
-                rule.maxAmountRule = true;
-                rule.minAmountRule = false;
-                rule.maxCount = rule.minCount - 1;
+            if(rule.amountRules){
+                rule.moreThan = !rule.moreThan;
             }
             c.rules[i] = CopyRule(rule);
         }
@@ -91,20 +81,18 @@ public class ShapeRuleCreator
     /// <summary>
     /// Creates a shape rule with the given parameters
     /// </summary>
-    public static ShapeRule CreateShapeRule(ShapeType shape, ColorType color, bool minAmountRule, int minAmount, bool maxAmountRule, int maxAmount, bool directionRule, Direction direction, ShapeType otherShape, ColorType otherColor){
+    public static ShapeRule CreateShapeRule(ShapeType shape, ColorType color,bool amountRules, bool moreThan, bool directionRule, Direction direction, ShapeType otherShape, ColorType otherColor){
         ShapeRule rule = new ShapeRule();
         rule.shapeType = shape;
         rule.color = color;
-        rule.minAmountRule = minAmountRule;
-        rule.minCount = minAmount;
-        rule.maxAmountRule = maxAmountRule;
-        rule.maxCount = maxAmount;
+        rule.amountRules = amountRules;
+        rule.moreThan = moreThan;
         rule.positionRules = directionRule;
         rule.direction = direction;
         rule.shapeToPositionTo = otherShape;
         rule.colorToPositionTo = otherColor;
         return rule;
-    }
+    } 
 
     public static ShapeRule[] CopyRules(ShapeRule[] r){
         ShapeRule[] newRules = new ShapeRule[r.Length];
@@ -117,10 +105,8 @@ public class ShapeRuleCreator
         ShapeRule newRule = new ShapeRule();
         newRule.shapeType = r.shapeType;
         newRule.color = r.color;
-        newRule.minAmountRule = r.minAmountRule;
-        newRule.minCount = r.minCount;
-        newRule.maxAmountRule = r.maxAmountRule;
-        newRule.maxCount = r.maxCount;
+        newRule.amountRules = r.amountRules;
+        newRule.moreThan = r.moreThan;
         newRule.positionRules = r.positionRules;
         newRule.direction = r.direction;
         newRule.shapeToPositionTo = r.shapeToPositionTo;
@@ -137,16 +123,6 @@ public class ShapeRuleCreator
                 return false;
             }
             if(r.color == r.colorToPositionTo && r.shapeType == r.shapeToPositionTo){
-                return false;
-            }
-        }
-        if(r.minAmountRule){
-            if(r.minCount < 1 || r.minCount > 7) { //TODO make this dynamic
-                return false;
-            }
-        }
-        if(r.maxAmountRule){
-            if(r.maxCount < 1){
                 return false;
             }
         }

@@ -304,7 +304,7 @@ public class Canvas : MonoBehaviour
         
         foreach(var rule in rules)
         {
-            if (rule.maxAmountRule || rule.minAmountRule) continue;
+            if (rule.amountRules) continue;
             MandatoryShapes.Add((rule.shapeType, rule.color));
             print("mandatory shape generated: " + rule.shapeType + rule.color);
         }
