@@ -153,8 +153,14 @@ public class CanvasManager : MonoBehaviour
         Debug.Log("Editor screenshot!");
         if (!System.IO.Directory.Exists(directory))
             System.IO.Directory.CreateDirectory(directory);
-
-        var screenshotName = fileName + "-" + positionIndexToLetter(canvases[4].positionIndex)  + "-nr" + nr + ".png";
+        var screenshotName = "";
+        if(toggleHint){
+            screenshotName = fileName + "-" + positionIndexToLetter(canvases[4].positionIndex)  + "-nr" + nr + ".png";
+        }
+        else{
+            screenshotName = fileName + nr + ".png";
+        }
+        
         ScreenCapture.CaptureScreenshot(System.IO.Path.Combine(directory, screenshotName));
 
         Debug.Log("new file saved to: " + directory + screenshotName);

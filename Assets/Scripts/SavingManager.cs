@@ -4,6 +4,9 @@ using com.cyborgAssets.inspectorButtonPro;
 using UnityEngine;
 using System.Linq;
 using System.Xml;
+using System.Xml.Serialization;
+using System.Runtime.InteropServices;
+using AOT;
 
 
 
@@ -11,9 +14,9 @@ public class SavingManager : MonoBehaviour
 {
     [SerializeField] CanvasManager canvasManager;
     [SerializeField] Canvas canvas0;
-    [SerializeField] RuleCreationUIManager ruleCreationUIManager;
+    [SerializeField] AllRulesViewUI ruleCreationUIManager;
     private void Start() {
-        ruleCreationUIManager = FindObjectOfType<RuleCreationUIManager>();
+        ruleCreationUIManager = FindObjectOfType<AllRulesViewUI>();
     }
     public void SaveRulesToDisk(ShapeRule[] rules, string fileName)
     {
@@ -44,9 +47,8 @@ public class SavingManager : MonoBehaviour
     [ProButton]
    public void SaveCurrentRulesToDisk(string fileName)
     {
-        ShapeRule[] rules = canvas0.rules;
+        ShapeRule[] rules = ruleCreationUIManager.GetRules().ToArray();
         //remove all rules that have the secondary property
-        rules = rules.Where(rule => rule.IsASecondaryRule == false).ToArray();
 
         SaveRulesToDisk(rules, fileName);
     }
@@ -59,15 +61,7 @@ public class SavingManager : MonoBehaviour
         // Check if the file exists
         if (File.Exists(filePath))
         {
-            // Read the JSON string from the file
-            string json = File.ReadAllText(filePath);
-
-            // Convert the JSON string to a rules array
-            ShapeRule[] rules = JsonUtility.FromJson<SerializationWrapper<ShapeRule>>(json).Items;
-
-            // Set the rules of the canvas
-            canvasManager.SetNewRules(rules);
-            ruleCreationUIManager.CreateUIForLoadedRules(rules);
+            CreateRulesFromFileContent(File.ReadAllText(filePath));
 
         }
         else
@@ -75,4 +69,17 @@ public class SavingManager : MonoBehaviour
             Debug.Log("File not found");
         }
     }
+    public void CreateRulesFromFileContent(string content)
+    {
+        // Read the JSON string from the file
+            string json = content;
+
+            // Convert the JSON string to a rules array
+            ShapeRule[] rules = JsonUtility.FromJson<SerializationWrapper<ShapeRule>>(json).Items;
+
+            // Set the rules of the canvas
+            //canvasManager.SetNewRules(rules);
+            ruleCreationUIManager.SetRules(rules);
+    }
+
 }
