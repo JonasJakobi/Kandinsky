@@ -1,7 +1,8 @@
 
+using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
-
+using System.Linq;
 public class RulesAmountCalculator : MonoBehaviour {
 
 
@@ -87,6 +88,46 @@ public class RulesAmountCalculator : MonoBehaviour {
         return CalculateTotalRuleAmount(amountOfRelations, shapeAmount, colorAmount);
        
     }
+    public static ShapeRule[] RulesAfterHint(ShapeRule rule, int verbosity){
+        ShapeRule[] all = SavingManager.Instance.LoadAllRules();
+        List<ShapeRule> rules = new List<ShapeRule>();
+        rules.AddRange(all);
+        if(verbosity == 1){
+            if(rule.positionRules){
+                rules = rules.Where(r => r.positionRules).ToList();
+            }
+            else{
+                rules = rules.Where(r => r.amountRules).ToList();
+            }
+        }
+        if(verbosity == 2){
+            rules = (rule.positionRules) ?  rules.Where(r => r.positionRules).ToList() : rules.Where(r => r.amountRules).ToList();
+            if(rule.shapeType != ShapeType.AllShapes){
+                rules = rules.Where(r => r.shapeType == rule.shapeType).ToList();
+            }
+            else{
+                rules = rules.Where(r => r.color == rule.color).ToList();
+            }
+        }
+
+        if(verbosity == 3){
+            rules = (rule.positionRules) ?  rules.Where(r => r.positionRules).ToList() : rules.Where(r => r.amountRules).ToList();
+            if(rule.shapeType != ShapeType.AllShapes){
+                rules = rules.Where(r => r.shapeType == rule.shapeType).ToList();
+            }
+            else{
+                rules = rules.Where(r => r.color == rule.color).ToList();
+            }
+            if(rule.shapeToPositionTo != ShapeType.AllShapes){
+                rules = rules.Where(r => r.shapeToPositionTo == rule.shapeToPositionTo).ToList();
+            }
+            else{
+                rules = rules.Where(r => r.colorToPositionTo == rule.colorToPositionTo).ToList();
+            }
+        }
+        return rules.ToArray();
+    }
+
 
 
     

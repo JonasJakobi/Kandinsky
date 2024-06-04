@@ -27,7 +27,7 @@ public class AllRulesViewUI : MonoBehaviour{
     }
     public void AddRule(ShapeRule rule){
         GameObject ruleUI = Instantiate(ruleUIPrefab, uiParent.transform);
-        ruleUI.transform.parent = uiParent.transform;
+        ruleUI.transform.SetParent(uiParent.transform, false);
         ruleUI.transform.SetSiblingIndex(uiParent.transform.childCount - 2); //ensure that the + button is always at the bottom
         ruleUI.GetComponent<UIRule>().SetRule(rule);
         ruleUI.GetComponent<UIRule>().OnRuleDeleted.AddListener(() => RemoveRule(rule));
@@ -40,6 +40,14 @@ public class AllRulesViewUI : MonoBehaviour{
 
     public List<ShapeRule> GetRules(){
         return rules.Select(x => x.GetComponent<UIRule>().rule).ToList();
+    }
+
+    public void DisableAllBut(ShapeRule[] rulesToStay){
+        foreach(GameObject rule in rules){
+            if(!rulesToStay.Contains(rule.GetComponent<UIRule>().rule)){
+                rule.GetComponent<UIRule>().Disable();
+            }
+        }
     }
     
 }

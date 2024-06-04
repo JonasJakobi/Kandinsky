@@ -298,8 +298,19 @@ public class ShapeRule
             return RulesResult.None;
         }
     }
-   
-    
+
+    public override bool Equals(object obj)
+    {
+        if (obj == null || GetType() != obj.GetType())
+        {
+            return false;
+        }
+        ShapeRule other = (ShapeRule)obj;
+        return shapeType.Equals(other.shapeType) && color.Equals(other.color) && positionRules.Equals(other.positionRules) && amountRules.Equals(other.amountRules) && moreThan.Equals(other.moreThan) && direction.Equals(other.direction) && shapeToPositionTo.Equals(other.shapeToPositionTo) && colorToPositionTo.Equals(other.colorToPositionTo);
+        
+    }
+
+
 }
 
 [System.Serializable]

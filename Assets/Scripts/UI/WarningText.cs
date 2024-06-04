@@ -5,18 +5,32 @@ using TMPro;
 public class WarningText : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI warningText;
-    [SerializeField] float warningTextDuration = 4f;
 
-
-    public void SetWarningText(string text)
+    /// <summary>
+    /// Sets the warning text to the given text for the given duration.
+    /// If duration is negative, the text will stay
+    /// </summary>
+    public void SetWarningText(string text, float duration=5, bool warningColor=true)
     {
         warningText.text = text;
-        StartCoroutine(ClearWarningText());
+        if(warningColor)
+        {
+            warningText.color = Color.red;
+        }
+        else
+        {
+            warningText.color = Color.black;
+        }
+        if(duration < 0)
+        {
+            return;
+        }
+        StartCoroutine(ClearWarningText(duration));
     }
 
-    private IEnumerator ClearWarningText()
+    private IEnumerator ClearWarningText(float duration)
     {
-        yield return new WaitForSeconds(warningTextDuration);
+        yield return new WaitForSeconds(duration);
         warningText.text = "";
     }
 }

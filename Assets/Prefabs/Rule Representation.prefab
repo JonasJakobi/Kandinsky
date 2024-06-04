@@ -791,7 +791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   defaultColor: {r: 1, g: 1, b: 1, a: 0}
-  disabledColor: {r: 0.38039216, g: 0.38039216, b: 0.38039216, a: 0}
+  disabledColor: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
   triangleSprite: {fileID: 21300000, guid: 89d0814b06c5e714697959dc81c30fcb, type: 3}
   squareSprite: {fileID: 21300000, guid: 90fe7a4067c53bc44b806a12a1385789, type: 3}
   circleSprite: {fileID: 21300000, guid: b33b3fa7fd662ee438a4642d691885cf, type: 3}
@@ -850,7 +850,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.6933962, g: 1, b: 0.75373775, a: 1}
-    m_DisabledColor: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 0.5019608}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:

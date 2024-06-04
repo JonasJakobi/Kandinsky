@@ -10,7 +10,7 @@ using AOT;
 
 
 
-public class SavingManager : MonoBehaviour
+public class SavingManager : Singleton<SavingManager>
 {
     [SerializeField] CanvasManager canvasManager;
     [SerializeField] Canvas canvas0;
@@ -53,7 +53,7 @@ public class SavingManager : MonoBehaviour
         SaveRulesToDisk(rules, fileName);
     }
     [ProButton]
-    public void LoadRulesFromDisk(string filename)
+    public ShapeRule[] LoadRulesFromDisk(string filename)
     {
         string directoryPath = @"C:\Users\Public\Pictures\Sample Pictures\";
         string filePath = Path.Combine(directoryPath, filename + ".json");
@@ -61,15 +61,16 @@ public class SavingManager : MonoBehaviour
         // Check if the file exists
         if (File.Exists(filePath))
         {
-            CreateRulesFromFileContent(File.ReadAllText(filePath));
+            return CreateRulesFromFileContent(File.ReadAllText(filePath));
 
         }
         else
         {
             Debug.Log("File not found");
+            return null;
         }
     }
-    public void CreateRulesFromFileContent(string content)
+    public ShapeRule[] CreateRulesFromFileContent(string content)
     {
         // Read the JSON string from the file
             string json = content;
@@ -80,6 +81,10 @@ public class SavingManager : MonoBehaviour
             // Set the rules of the canvas
             //canvasManager.SetNewRules(rules);
             ruleCreationUIManager.SetRules(rules);
+            return rules;
+    }
+    public ShapeRule[] LoadAllRules(){
+        return CreateRulesFromFileContent(Resources.Load<TextAsset>("realall").text);
     }
 
 }

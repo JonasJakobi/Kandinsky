@@ -110,6 +110,7 @@ public class UIRule : MonoBehaviour
     }
 
     public void HideButtons(){
+        GetComponent<Button>().interactable = false;
         deleteButton.gameObject.SetActive(false);
         editButton.gameObject.SetActive(false);
     }
@@ -131,6 +132,9 @@ public class UIRule : MonoBehaviour
 
     public void SetRuleToCanvasManager(){
         FindObjectOfType<CanvasManager>().SetNewRules(new ShapeRule[]{rule});
+    }
+    public void Disable(){
+        GetComponent<Image>().color = disabledColor;
     }
 
 }
