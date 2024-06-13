@@ -45,7 +45,7 @@ public class ProceedButton : MonoBehaviour
         if(!isButtonSelected)
         {
             Debug.Log("Please select a rule to proceed");
-            FindObjectOfType<WarningText>().SetWarningText("Please select a rule to proceed.");
+            FindObjectOfType<WarningText>().SetWarningText("Please select a rule to proceed.", 3);
             return;
         }
         FindObjectOfType<CanvasManager>().SetNewRules(new ShapeRule[]{selectedRule});

@@ -18,6 +18,12 @@ public class AllRulesViewUI : MonoBehaviour{
             AddRule(rule);
         }
     }
+    public void ClearRules(){
+        foreach(GameObject rule in rules){
+            Destroy(rule);
+        }
+        rules.Clear();
+    }
     [ProButton]
     public void HideRuleButtonsAndPlus(){
         foreach(GameObject rule in rules){
@@ -48,6 +54,12 @@ public class AllRulesViewUI : MonoBehaviour{
                 rule.GetComponent<UIRule>().Disable();
             }
         }
+    }
+
+    private void OnEnable() {
+
+        ShapeRule[] rules = SavingManager.Instance.CreateRulesFromFileContent(Resources.Load<TextAsset>("realall").text);
+        SetRules(rules);
     }
     
 }
