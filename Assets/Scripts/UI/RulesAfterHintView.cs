@@ -5,7 +5,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
-
+/// <summary>
+/// Use together with AllRulesViewUI to display all rules after a hint has been given.
+/// </summary>
 public class RulesAfterHintView : MonoBehaviour
 {
     AllRulesViewUI allRulesViewUI;

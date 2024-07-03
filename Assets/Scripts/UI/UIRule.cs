@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 using UnityEngine.UI;
+
+/// <summary>
+/// Attached to each rule in the UI. Responsible for displaying the rule.
+/// </summary>
 public class UIRule : MonoBehaviour
 {
     [Header("Colors & Images")]

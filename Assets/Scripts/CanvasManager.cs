@@ -149,7 +149,7 @@ public class CanvasManager : MonoBehaviour
     /// </summary>
     private IEnumerator TakeScreenshot(int nr)
     {
-        #if UNITY_EDITOR
+        #if UNITY_EDITOR || UNITY_STANDALONE_WIN
         Debug.Log("Editor screenshot!");
         if (!System.IO.Directory.Exists(directory))
             System.IO.Directory.CreateDirectory(directory);

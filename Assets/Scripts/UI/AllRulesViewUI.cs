@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using com.cyborgAssets.inspectorButtonPro;
 using System.Linq;
+
+/// <summary>
+/// Main First Screen of the application that shows all possible rules.
+/// </summary>
 public class AllRulesViewUI : MonoBehaviour{
    
 

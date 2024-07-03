@@ -9,7 +9,10 @@ using System.Runtime.InteropServices;
 using AOT;
 
 
-
+/// <summary>
+/// This class is responsible for saving and loading rules to and from disk.
+/// Can also be used to load all rules.
+/// </summary>
 public class SavingManager : Singleton<SavingManager>
 {
     [SerializeField] CanvasManager canvasManager;

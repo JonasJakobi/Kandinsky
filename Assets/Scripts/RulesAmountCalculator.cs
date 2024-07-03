@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 using System.Linq;
+
+/// <summary>
+/// This class is responsible for calculating the amount of rules possible in the application.
+/// Currently the number is not entirely correct in one case.
+/// </summary>
 public class RulesAmountCalculator : MonoBehaviour {
 
 
@@ -36,7 +41,12 @@ public class RulesAmountCalculator : MonoBehaviour {
         }
         
     }
-
+    /// <summary>
+    /// THIS ONE IS CURRENTLY INCORRECT. 
+    /// </summary>
+    /// <param name="rule"></param>
+    /// <param name="verbosity"></param>
+    /// <returns></returns>
     public static int CalculateRulesPossibleAfterHint(ShapeRule rule, int verbosity){
         int amountOfRelations = 6;
         int shapeAmount  = System.Enum.GetValues(typeof(ShapeType)).Length - 1;
@@ -88,6 +98,13 @@ public class RulesAmountCalculator : MonoBehaviour {
         return CalculateTotalRuleAmount(amountOfRelations, shapeAmount, colorAmount);
        
     }
+    /// <summary>
+    /// Returns all rules that are possible after a hint has been given. 
+    /// Hint is given in the form of a rule that it hints to and the verbosity of the hint.
+    /// </summary>
+    /// <param name="rule"></param>
+    /// <param name="verbosity"></param>
+    /// <returns></returns>
     public static ShapeRule[] RulesAfterHint(ShapeRule rule, int verbosity){
         ShapeRule[] all = SavingManager.Instance.LoadAllRules();
         List<ShapeRule> rules = new List<ShapeRule>();
