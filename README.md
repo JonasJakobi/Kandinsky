@@ -1,92 +1,62 @@
-# Kadinsky Shape Generator
-
-
-
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://git.imis.uni-luebeck.de/ingpsy/cocoai/kadinsky-shape-generator.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://git.imis.uni-luebeck.de/ingpsy/cocoai/kadinsky-shape-generator/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+# Kandinsky Generator
+> A program for creating Kandinsky Patterns, generating Kandinsky Figures, and creating images to be used user studies.
 
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+This project runs on the **Unity Editor Version 2021.2.7f1**. Due to the project building on WebGL, the **WebGL Build Support** module has to be added to the Editor. Open the ``/Assets/Scenes/StandardKandinskyScene`` and press play or Build the project to some directory and open the ``index.html`` file in the build folder. 
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+## Project Structure & Usage
+The project is housed inside the StandardKandinskyScene. The logic is mostly attached to the *Canvas Manager* GameObject.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+### Controls
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+**Tab** - Open / Close Rule Configuration Window.
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+**S** - Generate new Image.
 
-## License
-For open source projects, say how it is licensed.
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+**D** - Save image as png file.
+
+
+**O** - View current file path for saving images.
+
+
+### Configuring Rules through the Provided Interface
+
+
+To add a new rule, configure to what kind of objects the rule should apply by setting the color and shape dropdowns. They can not both be set to AllColors and AllShapes. Then, the type of rule can be specified by the dropdown which will reveal the other options for that rule. The rule then has to be added to the list of current rules by pressing *Add Rule* . After adding every rule, press *Export Rules* on the right or delete unwanted rules with the *x* button next to it in the list. 
+
+- *Reverse One Canvas* will ensure that one of the five images will have reversed rules. 
+
+- The *Show Hint* Button toggles between showing a hint which tells which image is reversed or showing explanations describing the rules. 
+When choosing explanations, *Diagnosticity* can be used to change how much information these statements give, with 0 disabling them and 5 being a full descrption of the rules. 
+When choosing the hint, it can also be set to be wrong and point out one of the images that is not reversed. 
+
+
+
+## Kandinsky Concepts Explained
+
+**Kandinsky Figure**:  
+A Kandinsky Figure is a square image containing $n$ Kandinsky Objects, each defined by their color, shape, position, and size. 
+
+**Statement / Rule:**
+
+A statement about a Kandinsky Figure $k$ can be represented in logical notation as
+> $s(k) \rightarrow B$  
+
+where $B$ is a boolean variable taking values of either $1$ or $0$ or as a natural language statement which can be true or false.
+In our current implementation there are 3 possible types of rules: 
+- Minimum Amount: There has to be atleast $x$ amount of the specified type of object in each figure.
+- Maximum Amount: There can be no more than $x$ amount of the specified type of object. 
+- Relative Positioning: Our specified type of object has to be below/ above/ to the right/ to the left of another type of object. 
+
+These rules can be applied to object of a specific color and shape (e.g. red squares) or just one of the two variables (e.g. "all shapes that are red" or "a square of any color").
+
+**Kandinsky Pattern**:  
+A Kandinsky Pattern is the subset of all Kandinsky Figures which follow its rules. For example, if we define the rule "Minimum amount of red shapes is 2" then every image that has more then two red objects belongs to this pattern. A more mathematically precise definition would be:
+
+Let the Kandinsky Pattern $K$ be the subset of all Kandinsky Figures $k$ for which the rules $s(k)$ are always true, where $s(k)$ represents the ground truth of $K$. Mathematically, this can be expressed as:
+
+> $ K = \{ k \mid \forall k \in K, \, s(k) = 1 \}$
